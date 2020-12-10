@@ -1,0 +1,19 @@
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+
+html {
+	background-color: white;
+}
+
+.slider {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	margin: auto;
+}

@@ -1,0 +1,23 @@
+.leaderboard-tile {
+  display: flex;
+  max-width: 60vw;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: cornsilk;
+  text-align: left;
+  color: black;
+  border: 1px solid black;
+}
+
+.leaderboard-tile-name {
+  flex: 3;
+}
+
+.leaderboard-tile-team {
+  flex: 1;
+}
+
+.leaderboard-tile-points {
+  flex: 1;
+}
