@@ -1,125 +1,171 @@
-import React from "react"
-import { graphql } from "gatsby"
-import "tachyons"
-import "./league.css"
+import React from "react";
+import { graphql } from "gatsby";
+import "tachyons";
+import "./league.css";
 import {
   isBrowser,
   isMobile,
   BrowserView,
   MobileView,
-} from "react-device-detect"
+} from "react-device-detect";
 
-import MobileBoard from "../components/mobileboard.js"
-import Nav from "../components/Nav.js"
-import LeagueStandings from "../components/leaguestandings.js"
-import IndivStandings from "../components/indivstandings.js"
-import "../components/league.css"
-import LeaderboardTile from "../components/leaderboard/leaderboard_tile"
+import MobileBoard from "../components/mobileboard.js";
+import Nav from "../components/Nav.js";
+import Footer from "../components/footer";
+import LeagueStandings from "../components/leaguestandings.js";
+import IndivStandings from "../components/indivstandings.js";
+import "../components/league.css";
+import LeaderboardTile from "../components/leaderboard/leaderboard_tile";
+import { node } from "prop-types";
 
-const LeaguePage = ({ data }) => (
-  <div>
-    <Nav />
+const LeaguePage = ({ data }) => {
+  var allData = data.allGoogleSpreadsheetIndividual.edges;
+  var nonZeroData = allData.filter((node) => node.node.points > 0);
 
-    {/* {data.allGoogleSpreadsheetTeam.edges.sort((a, b) => (a.node.position > b.node.position) ? 1 : -1)}
-		
-		{data.allGoogleSpreadsheetIndividual.edges.sort((a, b) => (a.node.position > b.node.position) ? 1 : -1)}
-		
-		{data.allGoogleSpreadsheetTeam.edges.map((item)=>(
-			<div>
-				{item.node.position} - {item.node.team} - {item.node.captain} , {item.node.points}
-			</div>					
-			)
-		)}
-		<br></br>
-		{data.allGoogleSpreadsheetIndividual.edges.filter(item => item.node.position<7).map((item)=>(
-			
-			<div>
-				{item.node.position} - {item.node.name} - {item.node.total}
-			</div>					
-			)
-		)} */}
+  var g = nonZeroData.length / 6;
+  var s = g + nonZeroData.length / 6;
+  var b = s + nonZeroData.length / 6;
 
-    {/* {console.log(data.allGoogleSpreadsheetTeam.edges.sort((a, b) => (a.node.position > b.node.position) ? 1 : -1))}
+  var gold = nonZeroData.filter((node) => node.node.position < g);
+  var silver = nonZeroData.filter(
+    (node) => node.node.position > g && node.node.position < s
+  );
+  var bronze = nonZeroData.filter(
+    (node) => node.node.position > s && node.node.position < b
+  );
+  var rest = nonZeroData.filter((node) => node.node.position > b);
+  console.log(gold);
+  console.log(silver);
+  console.log(bronze);
+  console.log(rest);
+  return (
+    <div>
+      <Nav />
 
-		{data.allGoogleSpreadsheetTeam.edges.map((item)=>(
-			<div>
-				{item.node.captain} - {item.node.position}
-			</div>					
-			)
-		)} */}
-    {/* <div class = "w-100 flex">
-			<img src = "https://i.ibb.co/L6Lq6dW/winner1.png" style={{width: "201.9px", height: "162.3px"}}/>
-			<h1 class = {`pa2 ml3 avenir navy ${(isBrowser) ? "f-subheadline" : "f1"}`}>Leaderboard</h1>
-		</div>
-		<BrowserView>
-			<div class = "w-100 flex" style={{alignItems: "flex-start"}}>
-	  			<LeagueStandings data={data.allGoogleSpreadsheetTeam.edges.sort((a, b) => (a.node.position > b.node.position) ? 1 : -1)} />
-	  			<IndivStandings data={data.allGoogleSpreadsheetIndividual.edges.sort((a, b) => (a.node.position > b.node.position) ? 1 : -1).filter(item => item.node.position<=6)}/>
-	  		</div>
-  		</BrowserView>
-  		<MobileView>
-  			<MobileBoard data_league = {data.allGoogleSpreadsheetTeam.edges.sort((a, b) => (a.node.position > b.node.position) ? 1 : -1)} data_indiv = {data.allGoogleSpreadsheetIndividual.edges.sort((a, b) => (a.node.position > b.node.position) ? 1 : -1).filter(item => item.node.position<=6)} />
-  		</MobileView> */}
-
-    <div className="leaderboard-section">
-      <div className="leaderboard-table">
-        <div className="leaderboard-table-heading">
-          <img className="leaderboard-logo grow" src={"../../logo.jpg"} />
-          <h1 class="f1-ns f4 lh-title">League Leaderboard</h1>
+      <div className="leaderboard-section flex">
+        <div className="w-30-ns w-100">
+          <div className="leaderboard-table-heading">
+            <h1 class="f1-ns f2 lh-title">League Leaderboard</h1>
+            <p class="f3-ns f6 apple-system">
+              The leaderboard below is based on the points obtained during
+              League Quizzes only. The scores are updated within 1 or 2 days
+              after any league quiz. For any discrepancies, contact Shaurya.
+            </p>
+          </div>
         </div>
-        <p class="f5-ns f6 apple-system">
-          The leaderboard below is based on the points obtained during League
-          Quizzes only. The scores are updated within 1 or 2 days after a quiz.
-          For any discrepancies, contact Shaurya.
-        </p>
+        <div className="w-10"></div>
+        <div className="w-60-ns w-100">
+          <div className="leaderboard-table">
+            <div className="leaderboard-tiles">
+              <LeaderboardTile
+                name={"Name"}
+                team_name={"Team Name"}
+                points={"Total Points"}
+                position={"Rank"}
+              />
+              {gold.map((node) => (
+                <LeaderboardTile
+                  name={node.node.name}
+                  team_name={node.node.team}
+                  points={node.node.points}
+                  position={node.node.position}
+                  background_color={"gold"}
+                  medal_src={"https://i.ibb.co/F7m3B7q/gold-Medal.png"}
+                />
+              ))}
 
-        <div className="leaderboard-tiles">
-          <LeaderboardTile
-            name={"Harry"}
-            team_name={"Gryffindor"}
-            points={"60"}
-            background_color={"gold"}
-          />
-          <LeaderboardTile
-            name={"Harry"}
-            team_name={"Gryffindor"}
-            points={"60"}
-            background_color={"gold"}
-          />
-          <LeaderboardTile
-            name={"Harry"}
-            team_name={"Gryffindor"}
-            points={"60"}
-            background_color={"gold"}
-          />
-          <LeaderboardTile
-            name={"Hermionee"}
-            team_name={"Gryffindor"}
-            points={"50"}
-            background_color={"silver"}
-          />
-          <LeaderboardTile
-            name={"Hermionee"}
-            team_name={"Gryffindor"}
-            points={"50"}
-            background_color={"silver"}
-          />
-          <LeaderboardTile
-            name={"Draco"}
-            team_name={"Syltherin"}
-            points={"40"}
-            background_color={"#CD7F32"}
-          />
-          <LeaderboardTile name={"Cho"} team_name={"Ravenclaw"} points={"60"} />
-          <LeaderboardTile name={"Cho"} team_name={"Ravenclaw"} points={"60"} />
-          <LeaderboardTile name={"Cho"} team_name={"Ravenclaw"} points={"60"} />
-          <LeaderboardTile name={"Cho"} team_name={"Ravenclaw"} points={"60"} />
-          <LeaderboardTile name={"Cho"} team_name={"Ravenclaw"} points={"60"} />
+              {silver.map((node) => (
+                <LeaderboardTile
+                  name={node.node.name}
+                  team_name={node.node.team}
+                  points={node.node.points}
+                  position={node.node.position}
+                  background_color={"silver"}
+                  medal_src={"https://i.ibb.co/TtsR8L3/silver-Medal.png"}
+                />
+              ))}
+
+              {bronze.map((node) => (
+                <LeaderboardTile
+                  name={node.node.name}
+                  team_name={node.node.team}
+                  points={node.node.points}
+                  position={node.node.position}
+                  background_color={"#CD7F32"}
+                  medal_src={"https://i.ibb.co/SdczRTL/bronze-Medal.png"}
+                />
+              ))}
+
+              {rest.map((node) => (
+                <LeaderboardTile
+                  name={node.node.name}
+                  team_name={node.node.team}
+                  points={node.node.points}
+                  position={node.node.position}
+                  medal_src={
+                    "https://i.ibb.co/zsGRrtt/Screenshot-2020-11-13-at-6-24-16-PM.png"
+                  }
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* <div className="leaderboard-section">
+        <div className="leaderboard-table">
+          <div className="leaderboard-table-heading">
+            <img className="leaderboard-logo grow" src={"../../logo.jpg"} />
+            <h1 class="f1-ns f4 lh-title">League Leaderboard</h1>
+          </div>
+          <p class="f5-ns f6 apple-system">
+            The leaderboard below is based on the points obtained during League
+            Quizzes only. The scores are updated within 1 or 2 days after a
+            quiz. For any discrepancies, contact Shaurya.
+          </p>
+
+          <div className="leaderboard-tiles">
+            {gold.map((node) => (
+              <LeaderboardTile
+                name={node.node.name}
+                team_name={node.node.team}
+                points={node.node.points}
+                background_color={"gold"}
+              />
+            ))}
+
+            {silver.map((node) => (
+              <LeaderboardTile
+                name={node.node.name}
+                team_name={node.node.team}
+                points={node.node.points}
+                background_color={"silver"}
+              />
+            ))}
+
+            {bronze.map((node) => (
+              <LeaderboardTile
+                name={node.node.name}
+                team_name={node.node.team}
+                points={node.node.points}
+                background_color={"#CD7F32"}
+              />
+            ))}
+
+            {rest.map((node) => (
+              <LeaderboardTile
+                name={node.node.name}
+                team_name={node.node.team}
+                points={node.node.points}
+              />
+            ))}
+          </div>
+        </div>
+      </div> */}
+      <Footer />
     </div>
-  </div>
-)
+  );
+};
 
 export const query = graphql`
   query HomePageQuery {
@@ -134,6 +180,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default LeaguePage
+export default LeaguePage;
