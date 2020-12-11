@@ -1,25 +1,32 @@
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
 
-.team-collage{
-    display: block;
-    position: relative;
-    padding-top: 2rem;
-    margin-left: auto;
-    margin-right: auto;
+.team-collage {
+  display: block;
+  position: relative;
+  padding-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+}
+
+.about-text {
+  font-size: 40px !important;
+}
+
+@media only screen and (max-width: 500px) {
+  .team-collage {
     width: 80%;
-    
+  }
+  .about-text {
+    padding-top: 0 !important;
+    font-size: 20px !important;
+  }
 }
 
-@media only screen and (min-width: 500px) {
-    .team-collage{
-        width: 55%;
-    }
-  }
+.avatar {
+  border-radius: 50%;
 
-.avatar{
-    border-radius: 50%;
-    
-    width: 250px;
+  width: 250px;
 }
