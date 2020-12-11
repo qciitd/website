@@ -1,0 +1,33 @@
+.bg-green{
+    background-color: #4BB069;
+}
+
+.bg-cream{
+    background-color: #FFFDF6;
+}
+
+.green-text{
+    color: #4BB069;
+}
+
+.cream-text{
+    color: #FFFDF6;
+}
+
+
+.banner{
+  /* background-image: url("https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/v1555428497/shape/mentalfloss/4hjh3kj634.png?itok=VH8M7Zp4");
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  background-size: cover; */
+  
+  background-color: #4BB069;
+}
+
+/* .transparent-box{
+  background-color: #4BB069;
+  opacity: 0.9;
+} */
+
+
+

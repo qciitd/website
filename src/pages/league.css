@@ -1,0 +1,46 @@
+.leaderboard-section {
+  background-color: #4fb96f;
+  padding: 1rem 3rem;
+}
+
+.leaderboard-table {
+  border: 1px solid white;
+  padding: 0rem 2rem;
+  border-radius: 15px;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.leaderboard-table-heading {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: start;
+}
+
+.leaderboard-logo {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border: 1px solid white;
+  margin: 0 2rem 0 0;
+}
+
+.leaderboard-tiles {
+  margin: 0 0 0 200px;
+}
+
+@media only screen and (max-width: 500px) {
+  .leaderboard-section {
+    padding: 1rem;
+  }
+  .leaderboard-table {
+    padding: 1rem;
+  }
+  .leaderboard-logo {
+    width: 40px;
+    height: 40px;
+    margin: 0 1rem 0 0;
+  }
+}

@@ -1,0 +1,25 @@
+body{
+    overflow-x: hidden;
+}
+
+.team-collage{
+    display: block;
+    position: relative;
+    padding-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    
+}
+
+@media only screen and (min-width: 500px) {
+    .team-collage{
+        width: 55%;
+    }
+  }
+
+.avatar{
+    border-radius: 50%;
+    
+    width: 250px;
+}
