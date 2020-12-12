@@ -38,7 +38,7 @@ const Footer = () => {
         </p>
       </div>
       <div className="footer-container">
-        Queries ? Mail us @ qciitdelhi@gmail.com
+        Queries? Send a mail @ qciitdelhi@gmail.com
         <div className="pt5">
           <a
             className="link blue dib mr4 tc grow "

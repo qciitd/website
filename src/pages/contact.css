@@ -1,0 +1,58 @@
+.container75 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.contact-text-container {
+  text-align: right;
+  flex: 1;
+  padding: 3rem;
+  font-size: 2vw;
+}
+.contact-form-container {
+  flex: 1;
+  padding: 3rem;
+  font-size: 20px;
+}
+
+.contact-form-container input,
+textarea {
+  display: block;
+  width: 25vw;
+  height: 60px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.contact-form-container button {
+  display: block;
+  width: 10vw;
+  margin: 10px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+  .container75 {
+    display: block;
+  }
+  .contact-text-container {
+    text-align: left;
+    padding: 1rem;
+    font-size: 14px;
+  }
+  .contact-form-container {
+    padding: 1rem;
+    font-size: 20px;
+  }
+  .contact-form-container input,
+  textarea {
+    width: 80vw;
+  }
+  .contact-form-container button {
+    width: 40vw;
+  }
+}
