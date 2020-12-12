@@ -19,8 +19,8 @@ class ContactPage extends React.Component {
         <div className="bg-green cream-text container75">
           <div className="contact-text-container">
             <h1>
-              We answer your questions for a living (literally). Queries ? Feel
-              free to get in touch by filling this form
+              We answer your questions for a living (literally).Feel free to get
+              in touch by filling this form
             </h1>
           </div>
           <div className="contact-form-container">
@@ -36,7 +36,7 @@ class ContactPage extends React.Component {
                   headers: {
                     "Content-Type": "application/x-www-form-urlencoded",
                   },
-                  body: encode({ "form-name": "contact-demo", ...values }),
+                  body: encode({ "form-name": "qciitd-contact", ...values }),
                 })
                   .then(() => {
                     alert("Success");
@@ -63,20 +63,23 @@ class ContactPage extends React.Component {
               }}
             >
               {() => (
-                <Form name="contact-demo" data-netlify={true}>
+                <Form name="qciitd-contact" data-netlify={true}>
                   <label htmlFor="name">Name: </label>
                   <Field name="name" />
-                  <ErrorMessage name="name" />
-
                   <label htmlFor="email">Email: </label>
                   <Field name="email" />
-                  <ErrorMessage name="email" />
-
                   <label htmlFor="message">Message: </label>
                   <Field name="message" component="textarea" />
-                  <ErrorMessage name="message" />
-
                   <button type="submit">Send</button>
+                  <p>
+                    <ErrorMessage name="name" />
+                  </p>
+                  <p>
+                    <ErrorMessage name="email" />{" "}
+                  </p>
+                  <p>
+                    <ErrorMessage name="message" />
+                  </p>
                 </Form>
               )}
             </Formik>

@@ -1,0 +1,16 @@
+.archives-link {
+  text-decoration: underline;
+  color: white;
+}
+
+.archives-container {
+  padding: 1rem 10rem 8rem 10rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .archives-container {
+    padding: 1rem;
+    text-align: center;
+  }
+}
