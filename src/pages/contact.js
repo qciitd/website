@@ -1,31 +1,17 @@
 import React from "react";
 import Footer from "../components/footer";
 import Nav from "../components/Nav";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 
 import "./contact.css";
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 class ContactPage extends React.Component {
-  state = {
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  };
-
-  handleInputChange = (event) => {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
-    this.setState({
-      [name]: value,
-    });
-  };
-
-  handleSubmit = (event) => {
-    event.preventDefault();
-    alert(`Welcome ${this.state.firstName} ${this.state.lastName}!`);
-  };
-
   render() {
     return (
       <div style={{ margin: "0 auto" }}>
@@ -38,39 +24,62 @@ class ContactPage extends React.Component {
             </h1>
           </div>
           <div className="contact-form-container">
-            <form data-netlify="true" name="qciitd-contact" method="post">
-              <input type="hidden" name="qciitd-contact" value="contact" />
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                value={this.state.name}
-                onChange={this.handleInputChange}
-              />
-              <input
-                type="text"
-                name="email"
-                placeholder="Email"
-                value={this.state.email}
-                onChange={this.handleInputChange}
-              />
-              <input
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                value={this.state.subject}
-                onChange={this.handleInputChange}
-              />
+            <Formik
+              initialValues={{
+                name: "",
+                email: "",
+                message: "",
+              }}
+              onSubmit={(values, actions) => {
+                fetch("/", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                  },
+                  body: encode({ "form-name": "contact-demo", ...values }),
+                })
+                  .then(() => {
+                    alert("Success");
+                    actions.resetForm();
+                  })
+                  .catch(() => {
+                    alert("Error");
+                  })
+                  .finally(() => actions.setSubmitting(false));
+              }}
+              validate={(values) => {
+                const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+                const errors = {};
+                if (!values.name) {
+                  errors.name = "Name Required";
+                }
+                if (!values.email || !emailRegex.test(values.email)) {
+                  errors.email = "Valid Email Required";
+                }
+                if (!values.message) {
+                  errors.message = "Message Required";
+                }
+                return errors;
+              }}
+            >
+              {() => (
+                <Form name="contact-demo" data-netlify={true}>
+                  <label htmlFor="name">Name: </label>
+                  <Field name="name" />
+                  <ErrorMessage name="name" />
 
-              <textarea
-                name="message"
-                placeholder="Message"
-                value={this.state.message}
-                onChange={this.handleInputChange}
-              ></textarea>
+                  <label htmlFor="email">Email: </label>
+                  <Field name="email" />
+                  <ErrorMessage name="email" />
 
-              <button type="submit">Submit</button>
-            </form>
+                  <label htmlFor="message">Message: </label>
+                  <Field name="message" component="textarea" />
+                  <ErrorMessage name="message" />
+
+                  <button type="submit">Send</button>
+                </Form>
+              )}
+            </Formik>
           </div>
         </div>
         <Footer />
