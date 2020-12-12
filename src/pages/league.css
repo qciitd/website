@@ -30,6 +30,10 @@
   overflow-y: scroll;
 }
 
+.header-tile {
+  padding: 0 1rem 0 0;
+}
+
 .leaderboard-table-heading {
   padding: 2rem;
 }
@@ -51,5 +55,8 @@
   }
   .leaderboard-table-heading {
     padding: 0rem 1rem;
+  }
+  .header-tile {
+    padding: 0 1rem 0 1rem;
   }
 }

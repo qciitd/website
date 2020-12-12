@@ -55,14 +55,17 @@ const LeaguePage = ({ data }) => {
         </div>
         <div className="w-10"></div>
         <div className="w-60-ns w-100">
+          <div className="header-tile">
+            <LeaderboardTile
+              name={"Name"}
+              team_name={"Team Name"}
+              points={"Total Points"}
+              position={"Rank"}
+            />
+          </div>
+
           <div className="leaderboard-table">
             <div className="leaderboard-tiles">
-              <LeaderboardTile
-                name={"Name"}
-                team_name={"Team Name"}
-                points={"Total Points"}
-                position={"Rank"}
-              />
               {gold.map((node) => (
                 <LeaderboardTile
                   name={node.node.name}
