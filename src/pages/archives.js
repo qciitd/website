@@ -4,6 +4,7 @@ import Nav from "../components/Nav.js";
 import Footer from "../components/footer.js";
 
 import "./archives.css";
+import "./main.css";
 
 const Archives = () => (
   <div>

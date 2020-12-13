@@ -1,4 +1,39 @@
-.navbar-logo{
-    border-radius: 50%;
-    width: 50px;
+.navbar-logo {
+  border-radius: 50%;
+  width: 50px;
+}
+
+.navbar-bars {
+  display: none;
+}
+
+.navbar-links p {
+  cursor: pointer;
+  display: inline-block;
+  margin: auto 1rem;
+}
+
+.navbar-links p:hover {
+  color: green;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-links p {
+    display: none;
+  }
+  .navbar-logo {
+    float: left;
+    display: inline;
+  }
+  .navbar-bars {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+  .responsive {
+    float: none;
+    display: block !important;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
 }

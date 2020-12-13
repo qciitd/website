@@ -6,6 +6,7 @@ import Nav from "../components/Nav.js";
 import Footer from "../components/footer.js";
 import CalendarCard from "../components/calendar_card.js";
 import "../components/style.css";
+import "./main.css";
 
 let output;
 let data = [

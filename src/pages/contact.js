@@ -4,6 +4,7 @@ import Nav from "../components/Nav";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
 import "./contact.css";
+import "./main.css";
 
 const encode = (data) => {
   return Object.keys(data)
