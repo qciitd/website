@@ -7,6 +7,17 @@
   display: none;
 }
 
+.navbar-links p {
+  cursor: pointer;
+  display: inline-block;
+  margin: auto 1rem;
+}
+
+.navbar-links p:hover {
+  color: green;
+  font-size: 1.5%;
+}
+
 @media screen and (max-width: 600px) {
   .navbar {
     padding: 2rem;

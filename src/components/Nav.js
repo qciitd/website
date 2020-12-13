@@ -38,52 +38,28 @@ const Nav = () => {
         <img className="navbar-logo" src={"../../logo.jpg"} />
       </p>
       <div className="navbar-links dib dtc-l v-mid w-90 w-90-l tr tr-l mb0-l mt2 mb2 pt2">
-        <p
-          onClick={() => onClick("/")}
-          className="nav pointer mt link dib mr3 mt3 mr4-l hover-green grow nav-menu"
-        >
+        <p onClick={() => onClick("/")} className="nav-menu">
           <h4>Home</h4>
         </p>
-        <p
-          onClick={() => onClick("/team")}
-          className=" pointer nav mt link dib mr3 mr4-l hover-green grow nav-menu"
-        >
+        <p onClick={() => onClick("/team")} className="nav-menu">
           <h4>Team</h4>
         </p>
-        <p
-          onClick={() => onClick("/calendar")}
-          className="nav pointer mt link dib mr3 mr4-l hover-green grow nav-menu"
-        >
+        <p onClick={() => onClick("/calendar")} className="nav-menu">
           <h4>Calendar</h4>
         </p>
-        <p
-          onClick={() => onClick("/archives")}
-          className="nav mt pointer link dib mr3 mr4-l hover-green grow nav-menu"
-        >
+        <p onClick={() => onClick("/archives")} className=" nav-menu">
           <h4>Archives</h4>
         </p>
-        <p
-          onClick={() => onClick("/league")}
-          className="nav mt pointer link dib mr3 mr4-l hover-green grow nav-menu"
-        >
+        <p onClick={() => onClick("/league")} className=" nav-menu">
           <h4>League</h4>
         </p>
-        <p
-          onClick={() => onClick("/recognitions")}
-          className="nav mt pointer link dib mr3 mr4-l hover-green grow nav-menu"
-        >
+        <p onClick={() => onClick("/recognitions")} className=" nav-menu">
           <h4>Recognitions</h4>
         </p>
-        <p
-          onClick={() => onClick("/halloffame")}
-          className="nav mt pointer link dib mr3 mr4-l hover-green grow nav-menu"
-        >
+        <p onClick={() => onClick("/halloffame")} className=" nav-menu">
           <h4>Hall of Fame</h4>
         </p>
-        <p
-          onClick={() => onClick("/contact")}
-          className="nav mt pointer link dib mr3 mr4-l hover-green grow nav-menu"
-        >
+        <p onClick={() => onClick("/contact")} className=" nav-menu">
           <h4>Contact Us</h4>
         </p>
         <a
