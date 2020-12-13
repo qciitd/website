@@ -21,22 +21,22 @@ import { node } from "prop-types";
 
 const LeaguePage = ({ data }) => {
   var allData = data.allGoogleSpreadsheetIndividual.edges;
-  var nonZeroData = allData.filter((node) => node.node.points > 0);
+  var nonZeroData = allData.filter((node) => node.node.points >= 0);
 
   var g = nonZeroData.length / 6;
   var s = g + nonZeroData.length / 6;
   var b = s + nonZeroData.length / 6;
 
-  var gold = nonZeroData.filter((node) => node.node.position < g);
+  var gold = nonZeroData.filter((node) => node.node.position < g && node.node.points!=0);
   var silver = nonZeroData.filter(
-    (node) => node.node.position > g && node.node.position < s
+    (node) => node.node.position > g && node.node.position < s && node.node.points!=0
   );
   var bronze = nonZeroData.filter(
-    (node) => node.node.position > s && node.node.position < b
+    (node) => node.node.position > s && node.node.position < b && node.node.points!=0
   );
   var rest = nonZeroData.filter((node) => node.node.position > b);
 
-  var zero = allData.filter((node) => node.node.points == 0);
+  var rest_zero = allData.filter((node) => node.node.points == 0);
 
   console.log(gold);
   console.log(silver);
@@ -115,7 +115,7 @@ const LeaguePage = ({ data }) => {
                 />
               ))}
 
-              {zero.map((node) => (
+              {rest_zero.map((node) => (
                 <LeaderboardTile
                   name={node.node.name}
                   team_name={node.node.team}
