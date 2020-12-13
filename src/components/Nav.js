@@ -11,8 +11,8 @@ const Nav = () => {
     navigate(route);
   };
   const showNavbar = () => {
-    var navMenus = document.querySelectorAll(".nav-menu");
     var navLinks = document.querySelector(".navbar-links");
+    var navMenus = navLinks.querySelectorAll("p");
     if (navLinks.classList.contains("w-90")) {
       navLinks.classList.remove("w-90");
       navLinks.classList.add("w-100");
