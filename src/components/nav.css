@@ -1,4 +1,31 @@
-.navbar-logo{
-    border-radius: 50%;
-    width: 50px;
+.navbar-logo {
+  border-radius: 50%;
+  width: 50px;
+}
+
+.navbar-bars {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    padding: 2rem;
+  }
+
+  .navbar-links p {
+    display: none;
+  }
+  .navbar-logo {
+    float: left;
+    display: inline;
+  }
+  .navbar-bars {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .responsive {
+    float: none;
+    display: block !important;
+    text-align: left;
+  }
 }
