@@ -18,12 +18,9 @@ const IndexPage = () => (
     <Nav />
     <div className="w-100 banner bg-green">
       <div className="fl header-text-container garamond">
-        <div className="cream-text header-text">QC IITD IS NOW ONLINE</div>
+        <div className="cream-text header-text">Welcome to Quizzing Club, IIT Delhi!</div>
         <div className="f3 fw5 pv3 cream-text">
-          (Almost)
-          <br /> For months we've been thinking of building a website. Lorem
-          ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <br /> For some time now, we have been thinking of having our own space on the internet. So, here we are: The one destination for interested people to look for any and all information they would like to know!
         </div>
         <div className="pt4-ns pt0 tl">
           <a
@@ -74,19 +71,19 @@ const IndexPage = () => (
       </div>
     </div>
     <div className="fl w-100 tc bg-cream">
-      <h1>We Quiz</h1>
+      <h1>We quiz and stuff (but mostly quiz)</h1>
       <div className="topic-tiles">
-        <FlipCard name={"GENERAL"} data={"ABCDEF"} />
+        <FlipCard name={"GENERAL"} image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2eerAsftnzti_it7Nbry2Vy0v1e4MTHA02IFCL34uquLlXRCj0Gv2PfgmLbg_3pjOQQ04FFsHO3p5g9w3Kxe5LYTENOLy6DQ&usqp=CAU&ec=45730948" colour = "black" data={"This genre covers everything you can possibly think of, not too obscure though :p From history to current events, myths to facts, and arts to sciences, this has got it all"} />
         <FlipCard
-          name={"MELA"}
-          data={"Music, Entertainment, Literature, Arts"}
+          name={"MELA"} colour = "white" image="https://serenademagazine.com/wp-content/uploads/2015/12/Screen-Shot-2018-06-18-at-2.21.43-AM.png"
+          data={" If you appreciate all things beautiful in life, then these quizzes are for you. MELA stands for Music, Entertainment, Literature, and Arts"}
         />
-        <FlipCard name={"SPORTS"} data={"Sports"} />
+        <FlipCard name={"INDIA"} image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIIhJIObitKVaKGr5nxMdr4li53-UkAQdqig&usqp=CAU" colour = "black" data={"The perfect quizzes to showcase your pride in our motherland and know more about every mystery that resides here, shallow or deep."} />
       </div>
       <div className="topic-tiles">
-        <FlipCard name={"INDIA"} data={"India"} />
-        <FlipCard name={"BIZ"} data={"Biz"} />
-        <FlipCard name={"SCITECH"} data={"Scitech"} />
+        <FlipCard name={"SPORTS"} image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ppF9uh6--O9LMa7ShoKxqLSVzZn3b1bYnw&usqp=CAU" colour = "white" data={"Frustrated that all the facts you have acquired about the world of sports are not acknowledged. Worry not, for Sports Quizzes always seek you and your fellows"} />
+        <FlipCard name={"BIZ"} image="https://www.incimages.com/uploaded_files/image/1920x1080/getty_526538729_207491.jpg" colour = "black" data={"To save time from wasting syllables, this is short for Business. Crisp facts from the world of corporates and companies for you to revel in are found in these quizzes "} />
+        <FlipCard name={"SCITECH"} image="https://image.freepik.com/free-photo/3d-render-abstract-geometric-background_56345-196.jpg" colour = "white" data={" If not for the sciences and the technology to realize them, the world would not be the wonder it is now. Join us here to honor the legacy of all the great minds and their thoughts that preceded us, and keep up with the latest tech facts"} />
       </div>
     </div>
 

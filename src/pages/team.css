@@ -12,7 +12,7 @@ body {
 }
 
 .about-text {
-  font-size: 40px !important;
+  font-size: 22px !important;
 }
 
 @media only screen and (max-width: 500px) {

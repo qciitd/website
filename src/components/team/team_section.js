@@ -10,8 +10,8 @@ const TeamSection = () => (
         className="flex"
         style={{ justifyContent: "center", alignItems: "start" }}
       >
-        <h1 class="f1 lh-title w-40-ns w-90">
-          What is it about my nose that displeases you, Lucius?
+        <h1 class="f1 lh-title w-40-ns w-40 mt6 ">
+          LO AND BEHOLD, <br/> THE TEAM!
           <br></br>
           <span className="f2 lh-copy" style={{ float: "right" }}></span>
         </h1>
@@ -44,7 +44,7 @@ const TeamSection = () => (
 
         <TeamMember
           name={"Prasoon"}
-          position={"Jwala"}
+          position={"Jwalamukhi"}
           image={"https://uploads.scratch.mit.edu/users/avatars/38862514.png"}
         />
         <TeamMember
@@ -56,7 +56,7 @@ const TeamSection = () => (
         />
         <TeamMember
           name={"Anshuman"}
-          position={"Kara"}
+          position={"Karakoram"}
           image={
             "https://i.pinimg.com/originals/67/ca/6c/67ca6c4cdb888d452c0c07cdb868790b.gif"
           }
@@ -92,7 +92,7 @@ const TeamSection = () => (
         />
         <TeamMember
           name={"Ambrish"}
-          position={"Vindy"}
+          position={"Vindhyachal"}
           image={
             "https://pyxis.nymag.com/v1/imgs/171/429/c95b07becc2bef532d9669b4824ea4386f-08-harry-potter.rsquare.w1200.jpg"
           }

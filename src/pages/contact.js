@@ -19,7 +19,7 @@ class ContactPage extends React.Component {
         <Nav />
         <div className="bg-green cream-text container75">
           <div className="contact-text-container">
-            <h1>
+            <h1 class="lh-copy w-70" style={{fontSize: "1.5em",marginLeft: "auto"}}>
               We answer your questions for a living (literally).Feel free to get
               in touch by filling this form
             </h1>

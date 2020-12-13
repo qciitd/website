@@ -21,7 +21,7 @@ import { node } from "prop-types";
 
 const LeaguePage = ({ data }) => {
   var allData = data.allGoogleSpreadsheetIndividual.edges;
-  var nonZeroData = allData.filter((node) => node.node.points > 0);
+  var nonZeroData = allData.filter((node) => node.node.points >= 0);
 
   var g = nonZeroData.length / 6;
   var s = g + nonZeroData.length / 6;
@@ -111,6 +111,7 @@ const LeaguePage = ({ data }) => {
                   }
                 />
               ))}
+
             </div>
           </div>
         </div>

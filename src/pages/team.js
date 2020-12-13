@@ -29,13 +29,10 @@ const Team = () => (
           <FlipPoster name={"64 Blocks"} data={"64 blocks"} />
           <FlipPoster name={"Anything you like"} data={"..."} />
         </div>
-        <div className="fl w-100 w-60-ns pl3 pr3 tr-ns tl">
-          <h1 class="f1-ns f2 lh-title">What do we do ?</h1>
-          <h1 class="f2-ns f3 lh-copy about-text">
-            <br></br>While these programs are useful for sketching ideas, they
-            aren’t 100% accurate in their reflection of how the web works across
-            device sizes or how things get drawn to the screen.Tachyons features
-            a spacing scale based on powers of two that starts at .25rem
+        <div className="fl w-100 w-60-ns pl3 pr3 tr-ns tl mt4">
+          <h1 class="f2 lh-title tl ml4">What do we do ?</h1>
+          <h1 class="f4-ns f4 lh-copy about-text w-90 center tl">
+            <br></br>At first glance, it would seem that all we do is ask each other random stuff and reward those in honour who answer correctly. While that may be true in essence, we do this in a variety of genres AND in a variety of formats. From covering the generic fields of quizzing to even obscure fandoms, we cater to any information that can be presented in questions in a fun and interesting manner. Moreover, it’s not all “if-you-know-then-you-know”; most of the questions are curated by our quizmasters so that you can logically arrive at the answer too. So put on your thinking caps (or deerstalker hats) and join us on this never-ending pleasurable quest of acquiring random knowledge!
           </h1>
         </div>
       </div>
