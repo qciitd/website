@@ -1,6 +1,7 @@
 import React from "react"
 
 import Gallery from 'react-grid-gallery';
+import { isBrowser } from "react-device-detect";
 
 const images = [
 	{
@@ -82,7 +83,7 @@ const ImageGallery = () => {
 				<h1 class = "tc avenir f2">Hall of Fame</h1>
 				<p class = "tc avenir f4 w-60 pb3" style={{margin:"auto"}}>Members of IITD QC represent the institute in several external quizzes and have bagged many wins. Some of these events are listed below.</p>
 			</div>
-			<div class = "pa2 w-80 tc" style={{display: "block", overflow:"auto", margin:"auto", marginTop: "30px"}}>
+			<div class = {`pa2 tc ${(isBrowser) ? "w-80" : "w-90"}`} style={{display: "block", overflow:"auto", margin:"auto", marginTop: "30px"}}>
 				<Gallery images={images} enableImageSelection={false} backdropClosesModal={true} />
 			</div>
 		</div>
