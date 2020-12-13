@@ -19,10 +19,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .navbar {
-    padding: 2rem;
-  }
-
   .navbar-links p {
     display: none;
   }
@@ -38,5 +34,6 @@
     float: none;
     display: block !important;
     text-align: left;
+    margin-bottom: 1rem;
   }
 }
