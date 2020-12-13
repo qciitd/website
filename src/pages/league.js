@@ -21,7 +21,7 @@ import { node } from "prop-types";
 
 const LeaguePage = ({ data }) => {
   var allData = data.allGoogleSpreadsheetIndividual.edges;
-  var nonZeroData = allData.filter((node) => node.node.points >= 0);
+  var nonZeroData = allData.filter((node) => node.node.points > 0);
 
   var g = nonZeroData.length / 6;
   var s = g + nonZeroData.length / 6;
@@ -35,6 +35,9 @@ const LeaguePage = ({ data }) => {
     (node) => node.node.position > s && node.node.position < b
   );
   var rest = nonZeroData.filter((node) => node.node.position > b);
+
+  var zero = allData.filter((node) => node.node.points == 0);
+
   console.log(gold);
   console.log(silver);
   console.log(bronze);
@@ -107,7 +110,19 @@ const LeaguePage = ({ data }) => {
                   points={node.node.points}
                   position={node.node.position}
                   medal_src={
-                    "https://i.ibb.co/zsGRrtt/Screenshot-2020-11-13-at-6-24-16-PM.png"
+                    "https://i.ibb.co/DD8w8pH/blank.png"
+                  }
+                />
+              ))}
+
+              {zero.map((node) => (
+                <LeaderboardTile
+                  name={node.node.name}
+                  team_name={node.node.team}
+                  points={node.node.points}
+                  position={node.node.position}
+                  medal_src={
+                    "https://i.ibb.co/DD8w8pH/blank.png"
                   }
                 />
               ))}
