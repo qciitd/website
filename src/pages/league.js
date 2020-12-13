@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import "tachyons";
 import "./league.css";
+import "./main.css";
 import {
   isBrowser,
   isMobile,

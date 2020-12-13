@@ -10,6 +10,7 @@ import FlipPoster from "../components/flipposter";
 import ProfileCard from "../components/profilecard";
 
 import "./team.css";
+import "./main.css";
 import TeamSection from "../components/team/team_section";
 
 const Team = () => (
