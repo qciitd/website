@@ -36,7 +36,7 @@ const Nav = () => {
       className="navbar db dt-l w-100 border-box pa3 ph5-l pv1"
     >
       <p className="dib dtc-l v-mid w-10 w-10-l tc tl-l mb0-l mb2 nav-menu">
-        <img className="navbar-logo" src={"../../logo.jpg"} />
+        <img onClick={() => onClick("/")} className="navbar-logo pointer" src={"../../logo.jpg"} />
       </p>
       <div className="navbar-links dib dtc-l v-mid w-90 w-90-l tr tr-l mb0-l mt2 mb2 pt2">
         <p onClick={() => onClick("/")} className="nav-menu">

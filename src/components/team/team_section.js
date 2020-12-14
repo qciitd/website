@@ -2,6 +2,7 @@ import React from "react"
 import Boss from "./boss"
 import TeamMember from "./team_member"
 import "./team_section.css"
+import { isBrowser } from "react-device-detect";
 
 const TeamSection = () => (
   <div>
@@ -10,7 +11,7 @@ const TeamSection = () => (
         className="flex"
         style={{ justifyContent: "center", alignItems: "start" }}
       >
-        <h1 class="f1 lh-title w-40-ns w-40 mt6 ">
+        <h1 class={`f1 lh-title ${(isBrowser)?"w-40-ns w-40 mt6" : "w-100 tc mt4"}`}>
           LO AND BEHOLD, <br/> THE TEAM!
           <br></br>
           <span className="f2 lh-copy" style={{ float: "right" }}></span>

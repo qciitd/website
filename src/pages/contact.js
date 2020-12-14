@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../components/footer";
 import Nav from "../components/Nav";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import {isBrowser} from "react-device-detect"
 
 import "./contact.css";
 import "./main.css";
@@ -19,7 +20,7 @@ class ContactPage extends React.Component {
         <Nav />
         <div className="bg-green cream-text container75">
           <div className="contact-text-container">
-            <h1 class="lh-copy w-70" style={{fontSize: "1.5em",marginLeft: "auto"}}>
+            <h1 class={`lh-copy ${(isBrowser)?"w-70":"tc"}`} style={{fontSize: "1.5em",marginLeft: "auto"}}>
               We answer your questions for a living (literally).Feel free to get
               in touch by filling this form
             </h1>
