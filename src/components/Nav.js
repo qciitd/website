@@ -64,7 +64,7 @@ const Nav = () => {
           <h4>Contact Us</h4>
         </p>
         <a
-          className="link pink dib mr3 mr4-l v-mid tc grow"
+          className="link pink dib ml3 mr3 mr4-l v-mid tc grow"
           href="https://www.instagram.com/iitdqc/"
           title="Instagram"
         >

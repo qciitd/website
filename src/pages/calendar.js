@@ -33,7 +33,7 @@ class Calendar extends React.Component {
       output = (
         <div>
           <BrowserView>
-            <div class="flex items-center justify-center ph4 pt0">
+            <div class="flex items-center justify-center ph4 pt0" style={{marginTop:"-45px"}}>
               <p
                 onClick={() => this.onRouteChange("old")}
                 class="f5 no-underline pointer br-100 black bg-animate hover-bg-green hover-white inline-flex items-center pa3 ba border-box mr4"
@@ -79,7 +79,7 @@ class Calendar extends React.Component {
         </div>
       );
       poster_group = (
-        <div class="slider w-90 pt3">
+        <div class="slider w-90 pt0 mt0">
           <CalendarCard
             poster={data[0]}
             name="Quiz Name"
@@ -140,7 +140,7 @@ class Calendar extends React.Component {
       output = (
         <div>
           <BrowserView>
-            <div class="flex items-center justify-center ph4 pt0">
+            <div class="flex items-center justify-center ph4 pt0" style={{marginTop:"-45px"}}>
               <p
                 onClick={() => this.onRouteChange("current")}
                 class="f5 no-underline pointer br-100 black bg-animate hover-bg-green hover-white inline-flex items-center pa3 ba border-box mr4"
@@ -172,7 +172,7 @@ class Calendar extends React.Component {
         </div>
       );
       poster_group = (
-        <div class="slider w-90 pt3">
+        <div class="slider w-90 pt0 mt0">
           <CalendarCard
             poster={data[1]}
             name="Quiz Name"
@@ -233,7 +233,7 @@ class Calendar extends React.Component {
       output = (
         <div>
           <BrowserView>
-            <div class="flex items-center justify-center ph4 pt0">
+            <div class="flex items-center justify-center ph4 pt0" style={{marginTop:"04x"}}>
               <p class={`pa2 mr4 ${isBrowser ? "f2" : "f3"} avenir green`}>
                 Past Events
               </p>
@@ -262,7 +262,7 @@ class Calendar extends React.Component {
       );
 
       poster_group = (
-        <div class="slider w-90 pt3">
+        <div class="slider w-90 pt0 mt0">
           <CalendarCard
             poster={data[2]}
             name="Quiz Name"

@@ -22,7 +22,7 @@ const Footer = () => {
           Home
         </p>
         <p onClick={() => onClick("/team")} class=" pointer  hover-green">
-          Team
+          About Us
         </p>
         <p onClick={() => onClick("/calendar")} class=" pointer hover-green">
           Calendar
