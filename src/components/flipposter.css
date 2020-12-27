@@ -15,8 +15,8 @@
 
   @media only screen and (min-width: 500px) {
     .flip-poster{
-      width: 220px;
-      height: 280px;
+      width: 250px;
+      height: 250px;
       margin: 10px 10px 10px 25px;
     }
   }
@@ -51,7 +51,6 @@
     color: white;
     padding:28% 0.2rem 0.2rem 0;
     
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2eerAsftnzti_it7Nbry2Vy0v1e4MTHA02IFCL34uquLlXRCj0Gv2PfgmLbg_3pjOQQ04FFsHO3p5g9w3Kxe5LYTENOLy6DQ&usqp=CAU&ec=45730948");
     background-repeat: no-repeat, repeat;
     background-position: center;
     background-size: cover;

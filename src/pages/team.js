@@ -13,21 +13,23 @@ import "./team.css";
 import "./main.css";
 import TeamSection from "../components/team/team_section";
 
+
 const Team = () => (
   <div>
     <SEO title="QC IIT Delhi. Team Members" />
     <Nav />
     <div>
-      <div className="vh-50 bg-green dtc v-mid tc">
-        <img className="team-collage v-mid" src={"./team.png"} />
+
+      <div className="vh-80 bg-green dtc v-mid tc center w-100">
+        <img className="team-collage v-mid" src={"https://i.ibb.co/mtmkRNb/Team.jpg"} />
         <h3 className="tc cream-text">QC Team, 2020-21</h3>
       </div>
       <div className="bg-cream vh-50 mv4 ">
         <div className="fl w-100 w-40-ns tc">
-          <FlipPoster name={"MasterMind"} data={"MasterMind"} />
-          <FlipPoster name={"Occam's Razor"} data={"Occam's Razor"} />
-          <FlipPoster name={"64 Blocks"} data={"64 blocks"} />
-          <FlipPoster name={"Anything you like"} data={"..."} />
+          <FlipPoster name={"64 Blocks"} data={"64 blocks"} image={"https://i.ibb.co/pbWM78Z/64blocks.jpg"}/>
+          <FlipPoster name={"Occam's Razor"} data={"Occam's Razor"} image={"https://i.ibb.co/Zmr96rX/occams.jpg"}/>
+          <FlipPoster name={"MasterMind"} data={"MasterMind"} image={"https://i.ibb.co/xq7210K/mastermind.jpg"} />
+          <FlipPoster name={"Trivia Knights"} data={"Trivia Knights"} image={"https://i.ibb.co/CzTgYrP/trivia.jpg"} />
         </div>
         <div className="fl w-100 w-60-ns pl3 pr3 tr-ns tl mt4">
           <h1 class="f2 lh-title tl ml4">What do we do ?</h1>
