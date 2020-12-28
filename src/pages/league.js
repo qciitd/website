@@ -20,7 +20,7 @@ import LeaderboardTile from "../components/leaderboard/leaderboard_tile";
 import { node } from "prop-types";
 
 const LeaguePage = ({ data }) => {
-  var allData = data.allGoogleSpreadsheetIndividual.edges;
+  var allData = data.allLeaderboardIndividual.edges;
   var nonZeroData = allData.filter((node) => node.node.points >= 0);
 
   var g = nonZeroData.length / 6;
