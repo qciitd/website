@@ -29,11 +29,17 @@ class Calendar extends React.Component {
   };
 
   render() {
+    var sheetData = this.props.data.allCalendarSheet1.edges;
+    sheetData.map((node) => console.log(node.node));
+
     if (this.state.route == "current") {
       output = (
         <div>
           <BrowserView>
-            <div class="flex items-center justify-center ph4 pt0" style={{marginTop:"-45px"}}>
+            <div
+              class="flex items-center justify-center ph4 pt0"
+              style={{ marginTop: "-45px" }}
+            >
               <p
                 onClick={() => this.onRouteChange("old")}
                 class="f5 no-underline pointer br-100 black bg-animate hover-bg-green hover-white inline-flex items-center pa3 ba border-box mr4"
@@ -140,7 +146,10 @@ class Calendar extends React.Component {
       output = (
         <div>
           <BrowserView>
-            <div class="flex items-center justify-center ph4 pt0" style={{marginTop:"-45px"}}>
+            <div
+              class="flex items-center justify-center ph4 pt0"
+              style={{ marginTop: "-45px" }}
+            >
               <p
                 onClick={() => this.onRouteChange("current")}
                 class="f5 no-underline pointer br-100 black bg-animate hover-bg-green hover-white inline-flex items-center pa3 ba border-box mr4"
@@ -233,7 +242,10 @@ class Calendar extends React.Component {
       output = (
         <div>
           <BrowserView>
-            <div class="flex items-center justify-center ph4 pt0" style={{marginTop:"04x"}}>
+            <div
+              class="flex items-center justify-center ph4 pt0"
+              style={{ marginTop: "04x" }}
+            >
               <p class={`pa2 mr4 ${isBrowser ? "f2" : "f3"} avenir green`}>
                 Past Events
               </p>
@@ -331,5 +343,24 @@ class Calendar extends React.Component {
     );
   }
 }
+
+export const query = graphql`
+  query CalendarQuery {
+    allCalendarSheet1 {
+      edges {
+        node {
+          class
+          poster
+          name
+          host
+          audience
+          date
+          time
+          platform
+        }
+      }
+    }
+  }
+`;
 
 export default Calendar;

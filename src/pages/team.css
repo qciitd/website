@@ -2,13 +2,21 @@ body {
   overflow-x: hidden;
 }
 
-.team-collage {
-  display: block;
-  position: relative;
-  padding-top: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 85%;
+.team-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 0 0;
+}
+
+.team-container h2 {
+  font-size: 2rem;
+}
+
+.team-group-picture img {
+  width: 70vw;
+  margin: 0 auto;
 }
 
 .about-text {
@@ -16,8 +24,11 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
-  .team-collage {
-    width: 80%;
+  .team-group-picture img {
+    width: 80vw;
+  }
+  .team-container h2 {
+    font-size: 1.5rem;
   }
   .about-text {
     padding-top: 0 !important;

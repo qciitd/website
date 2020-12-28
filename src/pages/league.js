@@ -27,12 +27,16 @@ const LeaguePage = ({ data }) => {
   var s = g + nonZeroData.length / 6;
   var b = s + nonZeroData.length / 6;
 
-  var gold = nonZeroData.filter((node) => node.node.position < g && node.node.points!=0);
+  var gold = nonZeroData.filter(
+    (node) => node.node.position < g && node.node.points != 0
+  );
   var silver = nonZeroData.filter(
-    (node) => node.node.position > g && node.node.position < s && node.node.points!=0
+    (node) =>
+      node.node.position > g && node.node.position < s && node.node.points != 0
   );
   var bronze = nonZeroData.filter(
-    (node) => node.node.position > s && node.node.position < b && node.node.points!=0
+    (node) =>
+      node.node.position > s && node.node.position < b && node.node.points != 0
   );
   var rest = nonZeroData.filter((node) => node.node.position > b);
 
@@ -109,9 +113,7 @@ const LeaguePage = ({ data }) => {
                   team_name={node.node.team}
                   points={node.node.points}
                   position={node.node.position}
-                  medal_src={
-                    "https://i.ibb.co/DD8w8pH/blank.png"
-                  }
+                  medal_src={"https://i.ibb.co/DD8w8pH/blank.png"}
                 />
               ))}
 
@@ -121,12 +123,9 @@ const LeaguePage = ({ data }) => {
                   team_name={node.node.team}
                   points={node.node.points}
                   position={node.node.position}
-                  medal_src={
-                    "https://i.ibb.co/DD8w8pH/blank.png"
-                  }
+                  medal_src={"https://i.ibb.co/DD8w8pH/blank.png"}
                 />
               ))}
-
             </div>
           </div>
         </div>
@@ -189,7 +188,7 @@ const LeaguePage = ({ data }) => {
 
 export const query = graphql`
   query HomePageQuery {
-    allGoogleSpreadsheetIndividual {
+    allLeaderboardIndividual {
       edges {
         node {
           name
