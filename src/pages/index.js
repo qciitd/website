@@ -1,6 +1,13 @@
 import React from "react";
 import { Link } from "gatsby";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
 import "tachyons";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import { SocialIcon } from "react-social-icons";
 
 import Nav from "../components/Nav.js";
@@ -13,14 +20,29 @@ import SEO from "../components/seo";
 
 import "./main.css";
 
-const IndexPage = () => (
+const settings = {
+  dots: false,
+  infinite: true,
+  autoplay: true,
+  speed: 1000,
+  /* fade: true, */
+  slidesToShow: 1,
+  swapToSlide: true,
+};
+
+const IndexPage = ({ data }) => (
   <div>
     <Nav />
     <div className="w-100 banner bg-green">
       <div className="fl header-text-container garamond">
-        <div className="cream-text header-text">Welcome to Quizzing Club, IIT Delhi!</div>
+        <div className="cream-text header-text">
+          Welcome to Quizzing Club, IIT Delhi!
+        </div>
         <div className="f3 fw5 pv3 cream-text">
-          <br /> For some time now, we have been thinking of having our own space on the internet. So, here we are: The one destination for interested people to look for any and all information they would like to know!
+          <br /> For some time now, we have been thinking of having our own
+          space on the internet. So, here we are: The one destination for
+          interested people to look for any and all information they would like
+          to know!
         </div>
         <div className="pt4-ns pt0 tl">
           <a
@@ -65,30 +87,94 @@ const IndexPage = () => (
         </div>
       </div>
       <div className="fl w-100 w-60-ns">
-        <div className="outline slideshow-container tc cream-text grow">
-          imagine a slideshow
+        <div className="slideshow-container tc cream-text">
+          <Slider {...settings} className="overflow-hidden slider">
+            <img
+              className=""
+              src="https://i.ibb.co/LYVtKFt/Whats-App-Image-2020-12-13-at-9-17-19-PM-1.jpg"
+            />
+            <img
+              className=""
+              src="https://i.ibb.co/V2nsfLW/Whats-App-Image-2020-12-13-at-9-17-19-PM.jpg"
+            />
+            <img
+              className=""
+              src="https://i.ibb.co/7VNVhx6/Whats-App-Image-2020-12-13-at-9-18-00-PM.jpg"
+            />
+          </Slider>
         </div>
       </div>
     </div>
     <div className="fl w-100 tc bg-cream">
       <h1>We quiz and stuff (but mostly quiz)</h1>
       <div className="topic-tiles">
-        <FlipCard name={"GENERAL"} image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2eerAsftnzti_it7Nbry2Vy0v1e4MTHA02IFCL34uquLlXRCj0Gv2PfgmLbg_3pjOQQ04FFsHO3p5g9w3Kxe5LYTENOLy6DQ&usqp=CAU&ec=45730948" colour = "black" data={"This genre covers everything you can possibly think of, not too obscure though :p From history to current events, myths to facts, and arts to sciences, this has got it all"} />
         <FlipCard
-          name={"MELA"} colour = "white" image="https://serenademagazine.com/wp-content/uploads/2015/12/Screen-Shot-2018-06-18-at-2.21.43-AM.png"
-          data={" If you appreciate all things beautiful in life, then these quizzes are for you. MELA stands for Music, Entertainment, Literature, and Arts"}
+          name={"GENERAL"}
+          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2eerAsftnzti_it7Nbry2Vy0v1e4MTHA02IFCL34uquLlXRCj0Gv2PfgmLbg_3pjOQQ04FFsHO3p5g9w3Kxe5LYTENOLy6DQ&usqp=CAU&ec=45730948"
+          colour="black"
+          data={
+            "This genre covers everything you can possibly think of, not too obscure though :p From history to current events, myths to facts, and arts to sciences, this has got it all"
+          }
         />
-        <FlipCard name={"INDIA"} image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIIhJIObitKVaKGr5nxMdr4li53-UkAQdqig&usqp=CAU" colour = "black" data={"The perfect quizzes to showcase your pride in our motherland and know more about every mystery that resides here, shallow or deep."} />
+        <FlipCard
+          name={"MELA"}
+          colour="white"
+          image="https://serenademagazine.com/wp-content/uploads/2015/12/Screen-Shot-2018-06-18-at-2.21.43-AM.png"
+          data={
+            " If you appreciate all things beautiful in life, then these quizzes are for you. MELA stands for Music, Entertainment, Literature, and Arts"
+          }
+        />
+        <FlipCard
+          name={"INDIA"}
+          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIIhJIObitKVaKGr5nxMdr4li53-UkAQdqig&usqp=CAU"
+          colour="black"
+          data={
+            "The perfect quizzes to showcase your pride in our motherland and know more about every mystery that resides here, shallow or deep."
+          }
+        />
       </div>
       <div className="topic-tiles">
-        <FlipCard name={"SPORTS"} image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ppF9uh6--O9LMa7ShoKxqLSVzZn3b1bYnw&usqp=CAU" colour = "white" data={"Frustrated that all the facts you have acquired about the world of sports are not acknowledged. Worry not, for Sports Quizzes always seek you and your fellows"} />
-        <FlipCard name={"BIZ"} image="https://www.incimages.com/uploaded_files/image/1920x1080/getty_526538729_207491.jpg" colour = "black" data={"To save time from wasting syllables, this is short for Business. Crisp facts from the world of corporates and companies for you to revel in are found in these quizzes "} />
-        <FlipCard name={"SCITECH"} image="https://image.freepik.com/free-photo/3d-render-abstract-geometric-background_56345-196.jpg" colour = "white" data={" If not for the sciences and the technology to realize them, the world would not be the wonder it is now. Join us here to honor the legacy of all the great minds and their thoughts that preceded us, and keep up with the latest tech facts"} />
+        <FlipCard
+          name={"SPORTS"}
+          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ppF9uh6--O9LMa7ShoKxqLSVzZn3b1bYnw&usqp=CAU"
+          colour="white"
+          data={
+            "Frustrated that all the facts you have acquired about the world of sports are not acknowledged. Worry not, for Sports Quizzes always seek you and your fellows"
+          }
+        />
+        <FlipCard
+          name={"BIZ"}
+          image="https://www.incimages.com/uploaded_files/image/1920x1080/getty_526538729_207491.jpg"
+          colour="black"
+          data={
+            "To save time from wasting syllables, this is short for Business. Crisp facts from the world of corporates and companies for you to revel in are found in these quizzes "
+          }
+        />
+        <FlipCard
+          name={"SCITECH"}
+          image="https://image.freepik.com/free-photo/3d-render-abstract-geometric-background_56345-196.jpg"
+          colour="white"
+          data={
+            " If not for the sciences and the technology to realize them, the world would not be the wonder it is now. Join us here to honor the legacy of all the great minds and their thoughts that preceded us, and keep up with the latest tech facts"
+          }
+        />
       </div>
     </div>
 
     <Footer />
   </div>
 );
+
+export const query = graphql`
+  query {
+    image1: file(relativePath: { eq: "static/kanagawa.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;

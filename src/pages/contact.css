@@ -57,7 +57,7 @@
   }
   .contact-form-container input,
   textarea {
-    width: 80vw;
+    width: 80vw !important;
   }
   .contact-form-container button {
     width: 40vw;

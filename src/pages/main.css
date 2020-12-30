@@ -21,6 +21,7 @@ body {
 .banner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .header-text-container {
@@ -35,10 +36,12 @@ body {
 }
 
 .slideshow-container {
-  flex: 2;
   margin: 4vw;
-  height: 50vh;
+  overflow: hidden;
   text-align: center;
+}
+
+.slideshow-container img {
 }
 
 .topic-tiles {
@@ -79,7 +82,7 @@ body {
 
   .slideshow-container {
     flex: 1;
-    width: 80vw;
+    width: 95vw;
     height: 30vh;
     margin: 1rem auto;
   }
