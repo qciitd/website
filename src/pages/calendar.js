@@ -29,8 +29,11 @@ class Calendar extends React.Component {
   };
 
   render() {
-    var sheetData = this.props.data.allCalendarSheet1.edges;
-    sheetData.map((node) => console.log(node.node));
+    var allData = this.props.data.allCalendarSheet1.edges;
+    allData.map((node) => console.log(node.node));
+    var oldData = allData.filter((node) => node.node.class == "Past Events");
+    var currentData = allData.filter((node) => node.node.class == "This Month");
+    var newData = allData.filter((node) => node.node.class == "Upcoming");
 
     if (this.state.route == "current") {
       output = (
@@ -86,60 +89,20 @@ class Calendar extends React.Component {
       );
       poster_group = (
         <div class="slider w-90 pt0 mt0">
-          <CalendarCard
-            poster={data[0]}
-            name="Quiz Name"
-            org="IITD QC"
-            date="31st Dec"
-            time="8 pm"
-            fees="Free"
-            platform="Discord"
-          />
-          <CalendarCard
-            poster={data[0]}
-            name="Quiz Name"
-            org="IITD QC"
-            date="31st Dec"
-            time="8 pm"
-            fees="Free"
-            platform="Discord"
-          />
-          <CalendarCard
-            poster={data[0]}
-            name="Quiz Name"
-            org="IITD QC"
-            date="31st Dec"
-            time="8 pm"
-            fees="Free"
-            platform="Discord"
-          />
-          <CalendarCard
-            poster={data[0]}
-            name="Quiz Name"
-            org="IITD QC"
-            date="31st Dec"
-            time="8 pm"
-            fees="Free"
-            platform="Discord"
-          />
-          <CalendarCard
-            poster={data[0]}
-            name="Quiz Name"
-            org="IITD QC"
-            date="31st Dec"
-            time="8 pm"
-            fees="Free"
-            platform="Discord"
-          />
-          <CalendarCard
-            poster={data[0]}
-            name="Quiz Name"
-            org="IITD QC"
-            date="31st Dec"
-            time="8 pm"
-            fees="Free"
-            platform="Discord"
-          />
+          {currentData.map((node) =>(
+            <CalendarCard
+              name = {node.node.name}
+              poster = {node.node.poster}
+              platform = {node.node.platform}
+              org = {node.node.host}
+              date = {node.node.date}
+              time = {node.node.time}
+              fees = {node.node.fees}
+              teams = {node.node.team}
+              audience = {node.node.audience}
+              event = "current"
+            />
+          ))}
         </div>
       );
     } else if (this.state.route == "new") {
@@ -182,60 +145,20 @@ class Calendar extends React.Component {
       );
       poster_group = (
         <div class="slider w-90 pt0 mt0">
-          <CalendarCard
-            poster={data[1]}
-            name="Quiz Name"
-            org="Not IITD QC"
-            date="3rd Jan"
-            time="8 pm"
-            fees="17 crores"
-            platform="Google Meet"
-          />
-          <CalendarCard
-            poster={data[1]}
-            name="Quiz Name"
-            org="Not IITD QC"
-            date="3rd Jan"
-            time="8 pm"
-            fees="17 crores"
-            platform="Google Meet"
-          />
-          <CalendarCard
-            poster={data[1]}
-            name="Quiz Name"
-            org="Not IITD QC"
-            date="3rd Jan"
-            time="8 pm"
-            fees="17 crores"
-            platform="Google Meet"
-          />
-          <CalendarCard
-            poster={data[1]}
-            name="Quiz Name"
-            org="Not IITD QC"
-            date="3rd Jan"
-            time="8 pm"
-            fees="17 crores"
-            platform="Google Meet"
-          />
-          <CalendarCard
-            poster={data[1]}
-            name="Quiz Name"
-            org="Not IITD QC"
-            date="3rd Jan"
-            time="8 pm"
-            fees="17 crores"
-            platform="Google Meet"
-          />
-          <CalendarCard
-            poster={data[1]}
-            name="Quiz Name"
-            org="Not IITD QC"
-            date="3rd Jan"
-            time="8 pm"
-            fees="17 crores"
-            platform="Google Meet"
-          />
+          {newData.map((node) =>(
+            <CalendarCard
+              name = {node.node.name}
+              poster = {node.node.poster}
+              platform = {node.node.platform}
+              org = {node.node.host}
+              date = {node.node.date}
+              time = {node.node.time}
+              fees = {node.node.fees}
+              teams = {node.node.team}
+              audience = {node.node.audience}
+              event = "new"
+            />
+          ))}
         </div>
       );
     } else if (this.state.route == "old") {
@@ -275,60 +198,20 @@ class Calendar extends React.Component {
 
       poster_group = (
         <div class="slider w-90 pt0 mt0">
-          <CalendarCard
-            poster={data[2]}
-            name="Quiz Name"
-            org="IITD QC"
-            date="3rd Nov"
-            time="8 pm"
-            fees="12 aana"
-            platform="Google Meet"
-          />
-          <CalendarCard
-            poster={data[2]}
-            name="Quiz Name"
-            org="IITD QC"
-            date="3rd Nov"
-            time="8 pm"
-            fees="12 aana"
-            platform="Google Meet"
-          />
-          <CalendarCard
-            poster={data[2]}
-            name="Quiz Name"
-            org="IITD QC"
-            date="3rd Nov"
-            time="8 pm"
-            fees="12 aana"
-            platform="Google Meet"
-          />
-          <CalendarCard
-            poster={data[2]}
-            name="Quiz Name"
-            org="IITD QC"
-            date="3rd Nov"
-            time="8 pm"
-            fees="12 aana"
-            platform="Google Meet"
-          />
-          <CalendarCard
-            poster={data[2]}
-            name="Quiz Name"
-            org="IITD QC"
-            date="3rd Nov"
-            time="8 pm"
-            fees="12 aana"
-            platform="Google Meet"
-          />
-          <CalendarCard
-            poster={data[2]}
-            name="Quiz Name"
-            org="IITD QC"
-            date="3rd Nov"
-            time="8 pm"
-            fees="12 aana"
-            platform="Google Meet"
-          />
+          {oldData.map((node) =>(
+            <CalendarCard
+              name = {node.node.name}
+              poster = {node.node.poster}
+              platform = {node.node.platform}
+              org = {node.node.host}
+              date = {node.node.date}
+              time = {node.node.time}
+              fees = {node.node.fees}
+              teams = {node.node.team}
+              audience = {node.node.audience}
+              event = "past"
+            />
+          ))}
         </div>
       );
     }

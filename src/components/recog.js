@@ -1,18 +1,19 @@
 import React from "react"
+import { isBrowser, BrowserView, MobileView } from "react-device-detect";
 
 const ReCard = ({event, date, details}) => {
-	return(
-		<article class="center br3 pa3 grow mv3 ba b--black-10" style={{background: "#4bb069", width: "280px", height: "320px"}}>
-		  <div class="tc">
-		    <h1 class="f4 white">{event}</h1>
-		    <h2 class="f5 white">{date}</h2>
-		    <hr class="mw3 bb bw1 b--black-10"/>
-		  </div>
-		  <p class="lh-copy center f6 white-90 ph3 tc">
-		    {details}
-		  </p>
-		</article>
 
+	return(
+		<div class="grid w-80 centre ma3"  style={{backgroundColor: "#4BB069"}}>
+			<div class="pa2 mb0">
+				<img src="https://i.ibb.co/nL69P9F/Sportify-Lakshya-Shashwat-Shobhit.jpg" style={{marginBottom: "0", paddingBottom:"0", height: "auto", width: "500px"}}/>
+			</div>
+			<div class="ph3 pt3 pb0 white">
+				<p class="f2 pa3 pt5 avenir mb0 pb0">{event}</p>
+				<p class="f3 pa3 mt3 pt0 avenir">{date}</p>
+				<p class="f4 pa3 w-80 avenir mb0 pb0">{details}</p>
+			</div>
+		</div>
 		)
 }
 
