@@ -1,7 +1,7 @@
 import React from "react"
 import './calendar_card.css'
 
-const CalendarCard = ({event, name,poster,org,date,time,audience,fees,platform, teams}) => {
+const CalendarCard = ({event, name,poster,org,date,time,audience,fees,platform, teams, link}) => {
 	if (fees != null) {
 		var fee = <p className="f4 ph3 mv1">Fees: {fees}</p>
 	} else {
@@ -21,6 +21,9 @@ const CalendarCard = ({event, name,poster,org,date,time,audience,fees,platform, 
 	if (teams != null) {
 		var teamsize = <p className="f4 ph3 mv1">Teams of {teams}</p>
 	}
+	if (link != null) {
+		var linkbutton = <a class="f5 ph3 pt3 white dim" href={link}>Add to your calendar</a>
+	}
 
 	if (event != "past") {
 		var output = (
@@ -32,6 +35,9 @@ const CalendarCard = ({event, name,poster,org,date,time,audience,fees,platform, 
 				{fee}
 				<p className="f4 ph3 mv1">Eligibility: {audience}</p>
 				{teamsize}	
+				<div class="pt4">
+					{linkbutton}
+				</div>
 			</div>
 		)
 	} else {

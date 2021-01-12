@@ -91,15 +91,15 @@ const IndexPage = ({ data }) => (
           <Slider {...settings} className="overflow-hidden slider">
             <img
               className=""
-              src="https://i.ibb.co/LYVtKFt/Whats-App-Image-2020-12-13-at-9-17-19-PM-1.jpg"
+              src="https://images2.imgbox.com/a5/51/3HKheTLB_o.jpg"
             />
             <img
               className=""
-              src="https://i.ibb.co/V2nsfLW/Whats-App-Image-2020-12-13-at-9-17-19-PM.jpg"
+              src="https://images2.imgbox.com/4e/4a/nS5lzG2c_o.jpg"
             />
             <img
               className=""
-              src="https://i.ibb.co/7VNVhx6/Whats-App-Image-2020-12-13-at-9-18-00-PM.jpg"
+              src="https://images2.imgbox.com/1c/b7/Wk2uv3pA_o.jpg"
             />
           </Slider>
         </div>

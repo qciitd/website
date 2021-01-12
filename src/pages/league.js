@@ -57,7 +57,7 @@ const LeaguePage = ({ data }) => {
             <p class="f3-ns f6 apple-system">
               The leaderboard below is based on the points obtained during
               League Quizzes only. The scores are updated within 1 or 2 days
-              after any league quiz. For any discrepancies, contact Shaurya.
+              after any league quiz. For any discrepancies, contact the secretary.
             </p>
           </div>
         </div>

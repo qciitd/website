@@ -53,7 +53,7 @@ const Recognitions = () => {
 		<div>
 			<Nav />
 			<h1 class="f1-ns f2 lh-title tc">Recognitions</h1>
-			<div class={`flex ${(isBrowser) ? "w-80" : ""}`} style={{margin:"auto"}}>
+			<div class={`grid ${(isBrowser) ? "w-80" : ""}`} style={{margin:"auto"}}>
 				{output}
 			</div>
 			<Footer />

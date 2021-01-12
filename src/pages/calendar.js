@@ -101,6 +101,7 @@ class Calendar extends React.Component {
               teams = {node.node.team}
               audience = {node.node.audience}
               event = "current"
+              link= "https://www.google.com"
             />
           ))}
         </div>

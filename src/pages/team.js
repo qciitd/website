@@ -23,7 +23,7 @@ const Team = ({ data }) => {
       <div>
         <div className="team-container bg-green">
           <div className="team-group-picture">
-            <img src={"https://i.ibb.co/mtmkRNb/Team.jpg"} />
+            <img src={"https://images2.imgbox.com/cf/71/k0dLT4BD_o.jpg"} />
           </div>
           <h2 className="tc cream-text">QC Team, 2020-21</h2>
         </div>
