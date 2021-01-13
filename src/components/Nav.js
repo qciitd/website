@@ -32,7 +32,7 @@ const Nav = () => {
   };
   return (
     <nav
-      style={{ fontFamily: "garamond" }}
+      style={{ fontFamily: "Raleway" }}
       className="navbar db dt-l w-100 border-box pa3 ph5-l pv1"
     >
       <p className="dib dtc-l v-mid w-10 w-10-l tc tl-l mb0-l mb2 nav-menu">
@@ -100,6 +100,24 @@ const Nav = () => {
               d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.476-1.195 1.176v1.54h2.39l-.31 2.416h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0"
               fill-rule="nonzero"
             />
+          </svg>
+        </a>
+        <a
+          className="link blue dib mr3 mr4-l v-mid tc grow"
+          href="https://www.linkedin.com/company/qc-iitdelhi"
+          title="LinkedIn"
+        >
+          <svg
+            className="dib h1 w1"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            stroke-linejoin="round"
+            stroke-miterlimit="1.414"
+          >
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
           </svg>
         </a>
         <FontAwesomeIcon

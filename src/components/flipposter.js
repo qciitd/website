@@ -8,7 +8,7 @@ const FlipPoster = ({name,data, image}) => {
 					<div className="flip-poster-front" style={{backgroundImage: `url("${image}")`}}>
 					</div>
 					<div className="flip-poster-back">
-						<p>{name}</p>
+						<p style={{"text-transform": "uppercase"}}>{name}</p>
 						<p>{data} </p>
 					</div>
 				</div>

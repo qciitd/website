@@ -50,7 +50,7 @@ let output = sample_data.map(x => <ReCard details = {x.details} event = {x.event
 
 const Recognitions = () => {
 	return(
-		<div>
+		<div style={{fontFamily: "Raleway"}}>
 			<Nav />
 			<h1 class="f1-ns f2 lh-title tc">Recognitions</h1>
 			<div class={`grid ${(isBrowser) ? "w-80" : ""}`} style={{margin:"auto"}}>

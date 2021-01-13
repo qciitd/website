@@ -9,6 +9,7 @@ import {
   BrowserView,
   MobileView,
 } from "react-device-detect";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 import MobileBoard from "../components/mobileboard.js";
 import Nav from "../components/Nav.js";
@@ -49,16 +50,22 @@ const LeaguePage = ({ data }) => {
   return (
     <div>
       <Nav />
-
-      <div className="leaderboard-section flex">
+      <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+      </head> 
+      <div className="leaderboard-section flex" style={{fontFamily: "Raleway"}}>
         <div className="w-30-ns w-100">
           <div className="leaderboard-table-heading">
-            <h1 class="f1-ns f2 lh-title">League Leaderboard</h1>
-            <p class="f3-ns f6 apple-system">
-              The leaderboard below is based on the points obtained during
-              League Quizzes only. The scores are updated within 1 or 2 days
-              after any league quiz. For any discrepancies, contact the secretary.
-            </p>
+            <ScrollAnimation animateIn="fadeIn" delay={100} offset={150} duration={2} animateOnce={true}>
+              <h1 class="f1-ns f2 lh-title">League Leaderboard</h1>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeIn" delay={800} offset={150} duration={2} animateOnce={true}>
+              <p class="f3-ns f6">
+                The leaderboard is based on the points obtained during
+                League Quizzes only. The scores are updated within 1 or 2 days
+                after any league quiz. For any discrepancies, contact the secretary.
+              </p>
+            </ScrollAnimation>
           </div>
         </div>
         <div className="w-10"></div>

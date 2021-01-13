@@ -2,14 +2,14 @@ import React from "react";
 import { navigate } from "gatsby";
 import "./footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   const onClick = (route) => {
     navigate(route);
   };
   return (
-    <div className="fl footer">
+    <div className="fl footer" style={{fontFamily: "Raleway"}}>
       <div className="container container-centered">
         <div>
           <img className="footer-logo" src={"../../logo.jpg"} />
@@ -48,6 +48,12 @@ const Footer = () => {
           <a href="mailto:qciitdelhi@gmail.com" target="_blank">
             <FontAwesomeIcon icon={faEnvelope} style={{ margin: "0 10px" }} />
             qciitdelhi@gmail.com
+          </a>
+        </p>
+        <p>
+          <a href="https://www.linkedin.com/company/qc-iitdelhi" target="_blank">
+            <FontAwesomeIcon icon={faLinkedin} style={{ margin: "0 10px" }} />
+            linkedin.com/company/qc-iitdelhi
           </a>
         </p>
         <p>

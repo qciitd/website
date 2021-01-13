@@ -9,7 +9,7 @@ const Boss = ({ name, position, image, linkedin }) => (
       <img className="team-avatar" src={image} />
     </div>
     <div className="team-member-name athelas">{name}</div>
-    <div className="team-member-subtitle  garamond ">{position}</div>
+    <div className="team-member-subtitle " style={{fontFamily: "Raleway"}}>{position}</div>
     <a href={linkedin} target="_blank">
       <div className="linkedin-button athelas">
         <FontAwesomeIcon icon={faLinkedinIn} size="xs" /> <span>Connect</span>

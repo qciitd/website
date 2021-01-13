@@ -2,6 +2,7 @@ import React from "react"
 import './calendar_card.css'
 
 const CalendarCard = ({event, name,poster,org,date,time,audience,fees,platform, teams, link}) => {
+
 	if (fees != null) {
 		var fee = <p className="f4 ph3 mv1">Fees: {fees}</p>
 	} else {
@@ -27,7 +28,7 @@ const CalendarCard = ({event, name,poster,org,date,time,audience,fees,platform, 
 
 	if (event != "past") {
 		var output = (
-			<div className="calendar-card-back tl">
+			<div onClick={()=>console.log(link)} className="calendar-card-back tl" style={{fontFamily: "Raleway"}}>
 				<p className="f2 ph3 mv0 pv0">{name}</p>
 				<p className="f4 ph3 mv1 pv1">{org}</p>
 				{timetext}

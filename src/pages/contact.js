@@ -16,12 +16,12 @@ const encode = (data) => {
 class ContactPage extends React.Component {
   render() {
     return (
-      <div style={{ margin: "0 auto" }}>
+      <div style={{ margin: "0 auto", fontFamily: "Raleway"}}>
         <Nav />
-        <div className="bg-green cream-text container75">
+        <div className="bg-green cream-text container75" style={{fontFamily: "Raleway"}}>
           <div className="contact-text-container">
             <h1 class={`lh-copy ${(isBrowser)?"w-70":"tc"}`} style={{fontSize: "1.5em",marginLeft: "auto"}}>
-              We answer your questions for a living (literally).Feel free to get
+              We answer your questions for a living (literally). Feel free to get
               in touch by filling this form
             </h1>
           </div>

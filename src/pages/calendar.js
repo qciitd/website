@@ -41,7 +41,7 @@ class Calendar extends React.Component {
           <BrowserView>
             <div
               class="flex items-center justify-center ph4 pt0"
-              style={{ marginTop: "-45px" }}
+              style={{ marginTop: "-45px", fontFamily: "Raleway" }}
             >
               <p
                 onClick={() => this.onRouteChange("old")}
@@ -73,7 +73,7 @@ class Calendar extends React.Component {
             </div>
           </BrowserView>
           <MobileView>
-            <div class="flex items-center justify-center ph2 pt0">
+            <div class="flex items-center justify-center ph2 pt0" style={{fontFamily: "Raleway"}}>
               <p
                 onClick={() => this.onRouteChange("old")}
                 class="pv3 ph3 pointer br-100 black bg-animate hover-bg-green hover-white"
@@ -88,7 +88,7 @@ class Calendar extends React.Component {
         </div>
       );
       poster_group = (
-        <div class="slider w-90 pt0 mt0">
+        <div class="slider w-80 pt0 mt0 pl3">
           {currentData.map((node) =>(
             <CalendarCard
               name = {node.node.name}
@@ -101,7 +101,7 @@ class Calendar extends React.Component {
               teams = {node.node.team}
               audience = {node.node.audience}
               event = "current"
-              link= "https://www.google.com"
+              link = {node.node.schedule}
             />
           ))}
         </div>
@@ -112,7 +112,7 @@ class Calendar extends React.Component {
           <BrowserView>
             <div
               class="flex items-center justify-center ph4 pt0"
-              style={{ marginTop: "-45px" }}
+              style={{ marginTop: "-45px", fontFamily: "Raleway" }}
             >
               <p
                 onClick={() => this.onRouteChange("current")}
@@ -134,7 +134,7 @@ class Calendar extends React.Component {
             </div>
           </BrowserView>
           <MobileView>
-            <div class="flex items-center justify-center ph2 pt0">
+            <div class="flex items-center justify-center ph2 pt0" style={{fontFamily: "Raleway"}}>
               <p
                 onClick={() => this.onRouteChange("current")}
                 class="pv3 ph3 pointer br-100 black bg-animate hover-bg-green hover-white"
@@ -145,7 +145,7 @@ class Calendar extends React.Component {
         </div>
       );
       poster_group = (
-        <div class="slider w-90 pt0 mt0">
+        <div class="slider w-80 pt0 pl3 mt0">
           {newData.map((node) =>(
             <CalendarCard
               name = {node.node.name}
@@ -157,6 +157,7 @@ class Calendar extends React.Component {
               fees = {node.node.fees}
               teams = {node.node.team}
               audience = {node.node.audience}
+              link = {node.node.schedule}
               event = "new"
             />
           ))}
@@ -168,7 +169,7 @@ class Calendar extends React.Component {
           <BrowserView>
             <div
               class="flex items-center justify-center ph4 pt0"
-              style={{ marginTop: "04x" }}
+              style={{ marginTop: "04x", fontFamily: "Raleway" }}
             >
               <p class={`pa2 mr4 ${isBrowser ? "f2" : "f3"} avenir green`}>
                 Past Events
@@ -186,7 +187,7 @@ class Calendar extends React.Component {
             </div>
           </BrowserView>
           <MobileView>
-            <div class="flex items-center justify-center ph2 pt0">
+            <div class="flex items-center justify-center ph2 pt0" style={{fontFamily: "Raleway"}}>
               <p class="f3 pa2 tc">Past Events</p>
               <p
                 onClick={() => this.onRouteChange("current")}
@@ -198,7 +199,7 @@ class Calendar extends React.Component {
       );
 
       poster_group = (
-        <div class="slider w-90 pt0 mt0">
+        <div class="slider w-80 pt0 pl3 mt0">
           {oldData.map((node) =>(
             <CalendarCard
               name = {node.node.name}
@@ -222,6 +223,9 @@ class Calendar extends React.Component {
         <Nav />
         <div class="flex items-center justify-center ph4 pv0 mt0">{output}</div>
         {poster_group}
+        <div class="tc pa3 mb2">
+          <a class="f4 dim blue avenir" href="https://calendar.google.com/calendar/u/4?cid=cWNpaXRkZWxoaUBnbWFpbC5jb20">Add calendar to your account</a>
+        </div>
         <Footer />
       </div>
     );
