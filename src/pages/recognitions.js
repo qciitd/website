@@ -46,9 +46,11 @@ const sample_data = [
 
 ]
 
-let output = sample_data.map(x => <ReCard details = {x.details} event = {x.event} date = {x.date}/>)
 
-const Recognitions = () => {
+const Recognitions = ({data}) => {
+	var recogData = data.allRecognitionsSheet1.edges;
+	let output = recogData.map((node) => <ReCard details = {node.node.details} event = {node.node.event} date = {node.node.date}/>)
+
 	return(
 		<div style={{fontFamily: "Raleway"}}>
 			<Nav />
@@ -60,5 +62,19 @@ const Recognitions = () => {
 		</div>
 	)
 }
+
+export const query = graphql` 
+  query RecognitionData {
+    allRecognitionsSheet1 {
+      edges {
+        node {
+          event
+          date
+          details
+        }
+      }
+    }
+  }
+`;
 
 export default Recognitions;

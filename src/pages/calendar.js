@@ -245,6 +245,8 @@ export const query = graphql`
           date
           time
           platform
+          schedule
+          team
         }
       }
     }
