@@ -9,7 +9,7 @@ import ImageGallery from "../components/gallery.js"
 import NewGallery from "../components/gallery_new.js"
 
 const HallOfFame = ({data}) => {
-	var galleryData = data.allGallery2019.edges;
+	var galleryData = data.allGallery2019Xx2020.edges;
     
 	return(
 		<div>
@@ -28,7 +28,7 @@ const HallOfFame = ({data}) => {
 
 export const query = graphql`
   query GalleryQuery {
-    allGallery2019 {
+    allGallery2019Xx2020 {
       edges {
         node {
           caption

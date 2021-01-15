@@ -87,7 +87,7 @@ const Nav = () => {
           title="Facebook"
         >
           <svg
-            className="dib h1 w1"
+            className="dib h1 w1 bg-white"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
@@ -108,7 +108,7 @@ const Nav = () => {
           title="LinkedIn"
         >
           <svg
-            className="dib h1 w1"
+            className="dib h1 w1 bg-white"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

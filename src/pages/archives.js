@@ -14,12 +14,12 @@ const Archives = () => (
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
     </head>
     <div className="bg-green tc pa4 v-mid h-mid cream-text archives-container" style={{fontFamily: "Raleway"}}>
-      <ScrollAnimation animateIn="fadeIn" delay={100} offset={150} duration={1.5} animateOnce={true}>
+      <ScrollAnimation animateIn="fadeIn" delay={100} offset={150} duration={2.25} animateOnce={true}>
         <a href="https://forms.gle/3C5rLRGWSrRTqVya8">
           <h1 className="tc f-subheadline-l grow archives-link">Link to Archives</h1>
         </a>
       </ScrollAnimation>
-      <ScrollAnimation animateIn="fadeIn" delay={500} offset={150} duration={1.5} animateOnce={true}>
+      <ScrollAnimation animateIn="fadeIn" delay={750} offset={150} duration={2.25} animateOnce={true}>
         <h3>
           Alright then, we keep our secrets like any other organization. Therefore, our archives are currently open only for IIT Delhi students. <br></br>
           <br></br>

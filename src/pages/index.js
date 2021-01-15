@@ -44,12 +44,12 @@ const IndexPage = ({ data }) => {
       </head>
       <div className="w-100 banner bg-green" style={{fontFamily: "Raleway"}}>
         <div className="fl header-text-container">
-          <ScrollAnimation animateIn="fadeIn" delay={100} offset={150} duration={2} animateOnce={true}>
+          <ScrollAnimation animateIn="fadeIn" delay={100} offset={150} duration={3} animateOnce={true}>
             <div className="cream-text header-text">
               Welcome to Quizzing Club, IIT Delhi!
             </div>
           </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeIn" delay={1000} offset={150} duration={2} animateOnce={true}>
+          <ScrollAnimation animateIn="fadeIn" delay={1500} offset={150} duration={3} animateOnce={true}>
             <div className="f3 fw5 pv3 cream-text">
               <br /> For some time now, we have been thinking of having our own
               space on the internet. So, here we are: The one destination for
@@ -57,7 +57,7 @@ const IndexPage = ({ data }) => {
               to know!
             </div>
           </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeIn" delay={1800} offset={150} duration={2} animateOnce={true}>
+          <ScrollAnimation animateIn="fadeIn" delay={1800} offset={150} duration={3} animateOnce={true}>
             <div className="pt4-ns pt0 tl">
               <a
                 className="link blue dib mr4 tc grow "

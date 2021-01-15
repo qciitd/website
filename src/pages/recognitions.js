@@ -54,7 +54,7 @@ const Recognitions = ({data}) => {
 	return(
 		<div style={{fontFamily: "Raleway"}}>
 			<Nav />
-			<h1 class="f1-ns f2 lh-title tc">Recognitions</h1>
+			<h1 class="f1-ns f2 lh-title tc" style={{color: "#4BB069"}}>Recognitions</h1>
 			<div class={`grid ${(isBrowser) ? "w-80" : ""}`} style={{margin:"auto"}}>
 				{output}
 			</div>

@@ -73,7 +73,7 @@ class Calendar extends React.Component {
             </div>
           </BrowserView>
           <MobileView>
-            <div class="flex items-center justify-center ph2 pt0" style={{fontFamily: "Raleway"}}>
+            <div class="flex items-center justify-center ph2 pt0" style={{fontFamily: "Raleway", color:"#4bb069"}}>
               <p
                 onClick={() => this.onRouteChange("old")}
                 class="pv3 ph3 pointer br-100 black bg-animate hover-bg-green hover-white"
@@ -134,7 +134,7 @@ class Calendar extends React.Component {
             </div>
           </BrowserView>
           <MobileView>
-            <div class="flex items-center justify-center ph2 pt0" style={{fontFamily: "Raleway"}}>
+            <div class="flex items-center justify-center ph2 pt0" style={{fontFamily: "Raleway", color: "#4bb069"}}>
               <p
                 onClick={() => this.onRouteChange("current")}
                 class="pv3 ph3 pointer br-100 black bg-animate hover-bg-green hover-white"
@@ -187,7 +187,7 @@ class Calendar extends React.Component {
             </div>
           </BrowserView>
           <MobileView>
-            <div class="flex items-center justify-center ph2 pt0" style={{fontFamily: "Raleway"}}>
+            <div class="flex items-center justify-center ph2 pt0" style={{fontFamily: "Raleway", color: "#4bb069"}}>
               <p class="f3 pa2 tc">Past Events</p>
               <p
                 onClick={() => this.onRouteChange("current")}

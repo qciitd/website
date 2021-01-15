@@ -57,7 +57,7 @@ const Team = ({ data }) => {
           </div>
           <div className="fl w-100 w-60-ns pl3 pr3 tr-ns tl mt4">
             <h1 class="f2 lh-title tl ml4">What do we do ?</h1>
-            <ScrollAnimation animateIn="fadeIn" delay={100} offset={150} duration={1.25} animateOnce={true}>
+            <ScrollAnimation animateIn="fadeIn" delay={100} offset={300} duration={3} animateOnce={true}>
               <h1 class="f4-ns f4 lh-copy about-text w-90 center tl">
                 <br></br>At first glance, it would seem that all we do is ask each
                 other random stuff and reward those in honour who answer
