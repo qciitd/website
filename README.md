@@ -1,99 +1,32 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  <a href="https://qciitdelhi.netlify.app">
+    <img alt="QC IITD" src="https://i.ibb.co/h1ZMr20/logo.jpg" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  Quizzing Club, IIT Delhi
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+The official website for Quizzing Club, IIT Delhi. Created to ensure that all information regarding events, team members, recognitions, calendar etc. are available at one place for students to access.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+View the live build <a href="https://qciitdelhi.netlify.app"><u>here </u></a>
 
-## 🚀 Quick start
+<br>
+<h2>Overview</h2>
+<b>1. Home Page</b>Introduction to the website, mentioning some of the activities and quizzes we participate in. Link to our social media handles and a slideshow also included. The slideshow is connected to a Google Sheet through which pictures can be added/removed.<br>
+<b>2. About Us</b>Information about the club and its flagship events - Mastermind, 64 blocks, Occam's Razor and Trivia Knights. Photograph and link to the LinkedIn profile of every hostel representative as well as the institute secretary, along with a full team photo. The information of the team members has been linked to a Google Sheet and the name, pictures, LinkedIn url etc. can be updated directly from the sheet.<br>
+<b>3. Calendar</b>To display information about current events, upcoming events and past events. Complete information, including posters, fees, prizes, team size, host etc. can be provided, and also an option to add the event to Google calendar is available. All the information is linked to a Google Sheet and can be updated directly from the sheet. An option to subscribe to the QC calendar (for all events) is also available.<br>
+<b>4. Archives</b>A link to the archives has been provided, which can only be accessed by IIT Delhi students. The link redirects to a Google form, and after entering Kerberos ID and a password, the archives can be accessed. The password can be requested by mailing to QC IITD using Kerberos mail ID.<br>
+<b>5. League</b>An individual leaderboard of scores from all the League quizzes. The top 1/6th are highlighted as gold, the next 1/6th as silver and the next 1/6th as bronze. Individuals with 0 points are not included in gold/silver/bronze ranking irrespective of rank. The leaderboard is also linked to a Google Sheet. <br>
+<b>6. Recognitions</b>Showcasing the performace of the club in external events. Displays the name of the events, the date and all the positions won. This page is also linked to a Google Sheet.<br>
+<b>7. Hall of Fame</b>A gallery displaying the performance of the club in past external events. On click, the images open in a larger lightbox and diplays a caption. The gallery is linked to a Google Sheet, and the images and captions can be edited, added or removed directly from the sheet.<br>
+<b>8. Contact Us</b>A contact us form, which is linked to Google forms. <br>
 
-1.  **Create a Gatsby site.**
+<h2>Tech and Frameworks used</h2>
+Gatsby (React.js), GraphQL, Google APIs, Tachyons
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+<br>
+<h2>Contributors</h2>
+<p><a href="https://www.linkedin.com/in/om-krishna-96012965/">Om Krishna</a> and <a href="https://www.linkedin.com/in/rehan-bhatia-6b59531a6/">Rehan Bhatia</a></p>
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
-
-1.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
-
-1.  **Open the source code and start editing!**
-
-    Your site is now running at `http://localhost:8000`!
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
-
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-
-## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
-
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
