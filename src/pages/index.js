@@ -26,6 +26,7 @@ const settings = {
   infinite: true,
   autoplay: true,
   speed: 1000,
+  autoplaySpeed: 5000,
   /* fade: true, */
   slidesToShow: 1,
   swapToSlide: true,
