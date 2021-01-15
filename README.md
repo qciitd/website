@@ -20,7 +20,7 @@ View the live build <a href="https://qciitdelhi.netlify.app"><u>here </u></a>
 <b>4. Archives</b><br>A link to the archives has been provided, which can only be accessed by IIT Delhi students. The link redirects to a Google form, and after entering Kerberos ID and a password, the archives can be accessed. The password can be requested by mailing to QC IITD using Kerberos mail ID.<br><br>
 <b>5. League</b><br>An individual leaderboard of scores from all the League quizzes. The top 1/6th are highlighted as gold, the next 1/6th as silver and the next 1/6th as bronze. Individuals with 0 points are not included in gold/silver/bronze ranking irrespective of rank. The leaderboard is also linked to a Google Sheet. <br><br>
 <b>6. Recognitions</b><br>Showcasing the performace of the club in external events. Displays the name of the events, the date and all the positions won. This page is also linked to a Google Sheet.<br><br>
-<b>7. Hall of Fame</b><br>A gallery displaying the performance of the club in past external events. On click, the images open in a larger lightbox and diplays a caption. The gallery is linked to a Google Sheet, and the images and captions can be edited, added or removed directly from the sheet.<br>
+<b>7. Hall of Fame</b><br>A gallery displaying the performance of the club in past external events. On click, the images open in a larger lightbox and diplays a caption. The gallery is linked to a Google Sheet, and the images and captions can be edited, added or removed directly from the sheet.<br><br>
 <b>8. Contact Us</b><br>A contact us form, which is linked to Google forms. <br><br>
 
 <h2>Tech and Frameworks used</h2>
