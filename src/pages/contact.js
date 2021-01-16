@@ -14,20 +14,21 @@ const encode = (data) => {
     .join("&");
 };
 
-const formResize = () => {
-  var w = window.innerWidth;
-  var h = window.innerHeight;
-  if (w < 600 || h < 500) {
-    document.getElementById("google-form").height = 600;
-    document.getElementById("google-form").width = 370;
-    console.log(document.getElementById("google-form"));
-  }
-};
-
 class ContactPage extends React.Component {
   componentDidMount() {
-    formResize();
+    window.addEventListener("load", this.formResize);
   }
+
+  formResize = () => {
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    if (w > 600 || h > 500) {
+      document.getElementById("google-form").height = 640;
+      document.getElementById("google-form").width = 640;
+      console.log(document.getElementById("google-form"));
+    }
+  };
+
   render() {
     return (
       <div style={{ margin: "0 auto", fontFamily: "Raleway" }}>
@@ -38,8 +39,12 @@ class ContactPage extends React.Component {
         >
           <div className="contact-text-container">
             <h1
-              class={`lh-copy ${isBrowser ? "w-70" : "tc"}`}
-              style={{ fontSize: "1.5em", marginLeft: "auto" }}
+              className={`lh-copy ${isBrowser ? "w-50" : "tc"}`}
+              style={{
+                fontSize: "1.5em",
+                textAlign: "center",
+                marginLeft: "auto",
+              }}
             >
               We answer your questions for a living (literally). Feel free to
               get in touch by filling this form
@@ -49,11 +54,9 @@ class ContactPage extends React.Component {
             <iframe
               id="google-form"
               src="https://docs.google.com/forms/d/e/1FAIpQLSc0kbyzMwJwPV_5OF8CGpWRra1v9boFl5G6NziigkuhgrzP6w/viewform?embedded=true"
-              width="640"
+              width="370"
               height="640"
               frameborder="0"
-              marginheight="0"
-              marginwidth="0"
             >
               Loading…
             </iframe>
