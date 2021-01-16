@@ -15,20 +15,6 @@ const encode = (data) => {
 };
 
 class ContactPage extends React.Component {
-  componentDidMount() {
-    window.addEventListener("load", this.formResize);
-  }
-
-  formResize = () => {
-    var w = window.innerWidth;
-    var h = window.innerHeight;
-    if (w > 600 || h > 500) {
-      document.getElementById("google-form").height = 640;
-      document.getElementById("google-form").width = 640;
-      console.log(document.getElementById("google-form"));
-    }
-  };
-
   render() {
     return (
       <div style={{ margin: "0 auto", fontFamily: "Raleway" }}>

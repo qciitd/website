@@ -5,6 +5,7 @@
   padding: 3rem 2rem 3rem 2rem;
   display: flex;
   justify-content: space-evenly;
+  position: relative;
 }
 
 .footer a {

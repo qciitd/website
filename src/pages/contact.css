@@ -93,6 +93,7 @@
 .contact-form {
   flex: 1;
   margin: auto 5px;
+  overflow-y: scroll;
 }
 
 .contact-form input,
@@ -114,6 +115,7 @@ textarea {
 .contact-form input:focus,
 textarea:focus {
   outline: none;
+  z-index: 500;
 }
 
 .contact-form button {
@@ -140,6 +142,7 @@ textarea:focus {
   .contact-form {
     margin: auto 5px;
     text-align: center;
+    position: relative;
   }
 
   .contact-form input,
