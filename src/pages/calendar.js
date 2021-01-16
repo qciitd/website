@@ -43,24 +43,33 @@ class Calendar extends React.Component {
               class="flex items-center justify-center ph4 pt0"
               style={{ marginTop: "-45px", fontFamily: "Raleway" }}
             >
-              <p
+              {/* <p
                 onClick={() => this.onRouteChange("old")}
                 class="f5 no-underline pointer br-100 black bg-animate hover-bg-green hover-white inline-flex items-center pa3 ba border-box mr4"
               >
-                <svg
-                  class="w1 hover"
-                  data-icon="chevronLeft"
-                  viewBox="0 0 32 32"
+                <span
+                  class="pl1"
+                  style={{ fontWeight: "1000", fontSize: "20px" }}
                 >
-                  <title>chevronLeft icon</title>
-                  <path d="M20 1 L24 5 L14 16 L24 27 L20 31 L6 16 z"></path>
-                </svg>
-                <span class="pl1"></span>
+                  &#60;
+                </span>
+              </p> */}
+              <p
+                onClick={() => this.onRouteChange("old")}
+                className="left-arrow"
+              >
+                &#60;
               </p>
-              <p class={`pa2 mr4 ${isBrowser ? "f2" : "f3"} avenir green`}>
+              <p class={`pa2 ${isBrowser ? "f2" : "f3"} avenir green`}>
                 Events this Month
               </p>
               <p
+                onClick={() => this.onRouteChange("new")}
+                className="left-arrow"
+              >
+                &#62;
+              </p>
+              {/* <p
                 onClick={() => this.onRouteChange("new")}
                 class="f5 no-underline pointer black bg-animate pointer hover-bg-green br-100 hover-white inline-flex items-center pa3 ba border-box"
               >
@@ -69,39 +78,58 @@ class Calendar extends React.Component {
                   <title>chevronRight icon</title>
                   <path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"></path>
                 </svg>
-              </p>
+              </p> */}
             </div>
           </BrowserView>
           <MobileView>
-            <div class="flex items-center justify-center ph2 pt0" style={{fontFamily: "Raleway", color:"#4bb069"}}>
-              <p
+            <div
+              class="flex items-center justify-center ph2 pt0"
+              style={{
+                fontFamily: "Raleway",
+                color: "#4bb069",
+                marginTop: "0",
+              }}
+            >
+              {/* <p
                 onClick={() => this.onRouteChange("old")}
                 class="pv3 ph3 pointer br-100 black bg-animate hover-bg-green hover-white"
-              >{`<`}</p>
+              >{`<`}</p> */}
+              <p
+                onClick={() => this.onRouteChange("old")}
+                className="left-arrow"
+              >
+                &#60;
+              </p>
               <p class="f3 pa2 tc">Events this Month</p>
               <p
                 onClick={() => this.onRouteChange("new")}
+                className="left-arrow"
+              >
+                &#62;
+              </p>
+              {/* <p
+                onClick={() => this.onRouteChange("new")}
                 class="pv3 ph3 pointer br-100 black bg-animate hover-bg-green hover-white"
-              >{`>`}</p>
+              >{`>`}</p> */}
             </div>
           </MobileView>
         </div>
       );
       poster_group = (
         <div class="slider w-80 pt0 mt0 pl3">
-          {currentData.map((node) =>(
+          {currentData.map((node) => (
             <CalendarCard
-              name = {node.node.name}
-              poster = {node.node.poster}
-              platform = {node.node.platform}
-              org = {node.node.host}
-              date = {node.node.date}
-              time = {node.node.time}
-              fees = {node.node.fees}
-              teams = {node.node.team}
-              audience = {node.node.audience}
-              event = "current"
-              link = {node.node.schedule}
+              name={node.node.name}
+              poster={node.node.poster}
+              platform={node.node.platform}
+              org={node.node.host}
+              date={node.node.date}
+              time={node.node.time}
+              fees={node.node.fees}
+              teams={node.node.team}
+              audience={node.node.audience}
+              event="current"
+              link={node.node.schedule}
             />
           ))}
         </div>
@@ -116,17 +144,9 @@ class Calendar extends React.Component {
             >
               <p
                 onClick={() => this.onRouteChange("current")}
-                class="f5 no-underline pointer br-100 black bg-animate hover-bg-green hover-white inline-flex items-center pa3 ba border-box mr4"
+                className="left-arrow"
               >
-                <svg
-                  class="w1 hover"
-                  data-icon="chevronLeft"
-                  viewBox="0 0 32 32"
-                >
-                  <title>chevronLeft icon</title>
-                  <path d="M20 1 L24 5 L14 16 L24 27 L20 31 L6 16 z"></path>
-                </svg>
-                <span class="pl1"></span>
+                &#60;
               </p>
               <p class={`pa2 mr4 ${isBrowser ? "f2" : "f3"} avenir green`}>
                 Upcoming Events
@@ -134,11 +154,20 @@ class Calendar extends React.Component {
             </div>
           </BrowserView>
           <MobileView>
-            <div class="flex items-center justify-center ph2 pt0" style={{fontFamily: "Raleway", color: "#4bb069"}}>
+            <div
+              class="flex items-center justify-center ph2 pt0"
+              style={{
+                fontFamily: "Raleway",
+                color: "#4bb069",
+                marginTop: "0",
+              }}
+            >
               <p
                 onClick={() => this.onRouteChange("current")}
-                class="pv3 ph3 pointer br-100 black bg-animate hover-bg-green hover-white"
-              >{`<`}</p>
+                className="left-arrow"
+              >
+                &#60;
+              </p>
               <p class="f3 pa2 tc">Upcoming Events</p>
             </div>
           </MobileView>
@@ -146,19 +175,19 @@ class Calendar extends React.Component {
       );
       poster_group = (
         <div class="slider w-80 pt0 pl3 mt0">
-          {newData.map((node) =>(
+          {newData.map((node) => (
             <CalendarCard
-              name = {node.node.name}
-              poster = {node.node.poster}
-              platform = {node.node.platform}
-              org = {node.node.host}
-              date = {node.node.date}
-              time = {node.node.time}
-              fees = {node.node.fees}
-              teams = {node.node.team}
-              audience = {node.node.audience}
-              link = {node.node.schedule}
-              event = "new"
+              name={node.node.name}
+              poster={node.node.poster}
+              platform={node.node.platform}
+              org={node.node.host}
+              date={node.node.date}
+              time={node.node.time}
+              fees={node.node.fees}
+              teams={node.node.team}
+              audience={node.node.audience}
+              link={node.node.schedule}
+              event="new"
             />
           ))}
         </div>
@@ -176,23 +205,28 @@ class Calendar extends React.Component {
               </p>
               <p
                 onClick={() => this.onRouteChange("current")}
-                class="f5 no-underline pointer black bg-animate pointer hover-bg-green br-100 hover-white inline-flex items-center pa3 ba border-box"
+                className="left-arrow"
               >
-                <span class="pr1"></span>
-                <svg class="w1" data-icon="chevronRight" viewBox="0 0 32 32">
-                  <title>chevronRight icon</title>
-                  <path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"></path>
-                </svg>
+                &#62;
               </p>
             </div>
           </BrowserView>
           <MobileView>
-            <div class="flex items-center justify-center ph2 pt0" style={{fontFamily: "Raleway", color: "#4bb069"}}>
+            <div
+              class="flex items-center justify-center ph2 pt0"
+              style={{
+                fontFamily: "Raleway",
+                color: "#4bb069",
+                marginTop: "0",
+              }}
+            >
               <p class="f3 pa2 tc">Past Events</p>
               <p
                 onClick={() => this.onRouteChange("current")}
-                class="pv3 ph3 pointer br-100 black bg-animate hover-bg-green hover-white"
-              >{`>`}</p>
+                className="left-arrow"
+              >
+                &#62;
+              </p>
             </div>
           </MobileView>
         </div>
@@ -200,18 +234,18 @@ class Calendar extends React.Component {
 
       poster_group = (
         <div class="slider w-80 pt0 pl3 mt0">
-          {oldData.map((node) =>(
+          {oldData.map((node) => (
             <CalendarCard
-              name = {node.node.name}
-              poster = {node.node.poster}
-              platform = {node.node.platform}
-              org = {node.node.host}
-              date = {node.node.date}
-              time = {node.node.time}
-              fees = {node.node.fees}
-              teams = {node.node.team}
-              audience = {node.node.audience}
-              event = "past"
+              name={node.node.name}
+              poster={node.node.poster}
+              platform={node.node.platform}
+              org={node.node.host}
+              date={node.node.date}
+              time={node.node.time}
+              fees={node.node.fees}
+              teams={node.node.team}
+              audience={node.node.audience}
+              event="past"
             />
           ))}
         </div>
@@ -224,7 +258,12 @@ class Calendar extends React.Component {
         <div class="flex items-center justify-center ph4 pv0 mt0">{output}</div>
         {poster_group}
         <div class="tc pa3 mb2">
-          <a class="f4 dim blue avenir" href="https://calendar.google.com/calendar/u/4?cid=cWNpaXRkZWxoaUBnbWFpbC5jb20">Add calendar to your account</a>
+          <a
+            class="f4 dim blue avenir"
+            href="https://calendar.google.com/calendar/u/4?cid=cWNpaXRkZWxoaUBnbWFpbC5jb20"
+          >
+            Add calendar to your account
+          </a>
         </div>
         <Footer />
       </div>

@@ -7,6 +7,10 @@
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.google-form-container {
+  margin: 25px auto;
+}
+
 .contact-text-container {
   text-align: right;
   flex: 1;

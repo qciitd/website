@@ -49,6 +49,25 @@ body {
   justify-content: center;
 }
 
+.left-arrow {
+  text-align: center;
+  color: #4bb069;
+  font-weight: 900;
+  font-size: 22px;
+  width: 52px;
+  height: 50px;
+  line-height: 44px;
+  margin: 0 2rem;
+  border: 1px solid #4bb069;
+  border-radius: 50%;
+}
+
+.left-arrow:hover {
+  background-color: #4bb069;
+  border: 1px solid white;
+  color: #fffdf6;
+}
+
 @media only screen and (max-width: 800px) {
   .banner {
     flex-direction: column;
@@ -85,5 +104,20 @@ body {
     width: 95vw;
     height: 30vh;
     margin: 1rem auto;
+  }
+  .left-arrow {
+    text-align: center;
+    color: #4bb069;
+    font-weight: 900;
+    font-size: 22px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 0rem;
+    border: none;
+  }
+  .left-arrow:hover {
+    background-color: #fffdf6;
+    color: #4bb069;
   }
 }

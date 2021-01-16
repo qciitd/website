@@ -2,10 +2,11 @@ import React from "react";
 import Footer from "../components/footer";
 import Nav from "../components/Nav";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import {isBrowser} from "react-device-detect"
+import { isBrowser } from "react-device-detect";
 
 import "./contact.css";
 import "./main.css";
+import { doc } from "prettier";
 
 const encode = (data) => {
   return Object.keys(data)
@@ -13,19 +14,52 @@ const encode = (data) => {
     .join("&");
 };
 
+const formResize = () => {
+  var w = window.innerWidth;
+  var h = window.innerHeight;
+  if (w < 600 || h < 500) {
+    document.getElementById("google-form").height = 600;
+    document.getElementById("google-form").width = 370;
+    console.log(document.getElementById("google-form"));
+  }
+};
+
 class ContactPage extends React.Component {
+  componentDidMount() {
+    formResize();
+  }
   render() {
     return (
-      <div style={{ margin: "0 auto", fontFamily: "Raleway"}}>
+      <div style={{ margin: "0 auto", fontFamily: "Raleway" }}>
         <Nav />
-        <div className="bg-green cream-text container75" style={{fontFamily: "Raleway"}}>
+        <div
+          className="bg-green cream-text container75"
+          style={{ fontFamily: "Raleway" }}
+        >
           <div className="contact-text-container">
-            <h1 class={`lh-copy ${(isBrowser)?"w-70":"tc"}`} style={{fontSize: "1.5em",marginLeft: "auto"}}>
-              We answer your questions for a living (literally). Feel free to get
-              in touch by filling this form
+            <h1
+              class={`lh-copy ${isBrowser ? "w-70" : "tc"}`}
+              style={{ fontSize: "1.5em", marginLeft: "auto" }}
+            >
+              We answer your questions for a living (literally). Feel free to
+              get in touch by filling this form
             </h1>
           </div>
-          <div className="contact-form-container">
+          <div className="google-form-container">
+            <iframe
+              id="google-form"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSc0kbyzMwJwPV_5OF8CGpWRra1v9boFl5G6NziigkuhgrzP6w/viewform?embedded=true"
+              width="640"
+              height="640"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+            >
+              Loading…
+            </iframe>
+          </div>
+
+          {/* <div className="contact-form-container">
             <Formik
               initialValues={{
                 name: "",
@@ -85,7 +119,7 @@ class ContactPage extends React.Component {
                 </Form>
               )}
             </Formik>
-          </div>
+          </div> */}
         </div>
         <Footer />
       </div>
