@@ -6,12 +6,12 @@ import { isBrowser } from "react-device-detect";
 import ScrollAnimation from 'react-animate-on-scroll';
 
 const TeamSection = (data) => {
-  console.log(data.data);
+  
 
   var teamData = data.data;
   var secy = teamData[13].node;
   var members = teamData.slice(0, 13);
-  console.log(members);
+  
 
   return (
     <div style={{fontFamily: "Raleway"}}>
