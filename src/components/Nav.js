@@ -48,6 +48,9 @@ const Nav = () => {
         <p onClick={() => onClick("/calendar")} className="nav-menu">
           <h4>Calendar</h4>
         </p>
+        <p onClick={() => onClick("/rdv")} className="nav-menu">
+          <h4>Rendezvous '21</h4>
+        </p>
         <p onClick={() => onClick("/archives")} className=" nav-menu">
           <h4>Archives</h4>
         </p>
