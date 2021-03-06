@@ -116,7 +116,7 @@ class Calendar extends React.Component {
         </div>
       );
       poster_group = (
-        <div class="slider w-80 pt0 mt0 pl3">
+        <div class="slider pt0 mt0 w-80-ns pl3-ns">
           {currentData.map((node) => (
             <CalendarCard
               name={node.node.name}
@@ -176,7 +176,7 @@ class Calendar extends React.Component {
         </div>
       );
       poster_group = (
-        <div class="slider w-80 pt0 pl3 mt0">
+        <div class="slider pt0 w-80-ns pl3-ns mt0">
           {newData.map((node) => (
             <CalendarCard
               name={node.node.name}
@@ -237,7 +237,7 @@ class Calendar extends React.Component {
       );
 
       poster_group = (
-        <div class="slider w-80 pt0 pl3 mt0">
+        <div class="slider pt0 w-80-ns pl3-ns mt0">
           {oldData.map((node) => (
             <CalendarCard
               name={node.node.name}
