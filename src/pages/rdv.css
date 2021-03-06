@@ -12,12 +12,12 @@
 @media only screen and (max-width: 600px) {
     .rdv_banner_qc{
         border-radius: 50%;
-        height: 50px;
+        height: 60px;
         margin: 0 0.5rem;
     }
     
     .rdv_banner_logo{
-        height: 50px;
+        height: 62px;
         margin: 0 0.5rem;
     }
     
