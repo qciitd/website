@@ -1,7 +1,7 @@
 import React from "react"
 import './calendar_card.css'
 
-const CalendarCard = ({event, name,poster,org,date,time,audience,fees,platform, teams, link}) => {
+const CalendarCard = ({event, name,poster,org,date,time,audience,fees,platform, teams, link, info, register}) => {
 
 	if (fees != null) {
 		var fee = <p className="f4 ph3 mv1">Fees: {fees}</p>
@@ -26,6 +26,14 @@ const CalendarCard = ({event, name,poster,org,date,time,audience,fees,platform, 
 		var linkbutton = <a class="f5 ph3 pt3 white dim" href={link}>Add to your calendar</a>
 	}
 
+	if (info != null) {
+		var infobutton = <a class="f5 ph3 pt3 white dim" href={info}>For more info</a>
+	}
+
+	if (register != null) {
+		var regbutton = <a class="f5 ph3 pt3 white dim" href={register}>Register Now</a>
+	}
+
 	if (event != "past") {
 		var output = (
 			<div onClick={()=>console.log(link)} className="calendar-card-back tl" style={{fontFamily: "Raleway"}}>
@@ -38,7 +46,18 @@ const CalendarCard = ({event, name,poster,org,date,time,audience,fees,platform, 
 				{teamsize}	
 				<div class="pt4">
 					{linkbutton}
+					
 				</div>
+				<div class="pt1">
+				{infobutton}
+					
+				</div>
+				<div class="pt1">
+				{regbutton}
+					
+				</div>
+				
+					
 			</div>
 		)
 	} else {

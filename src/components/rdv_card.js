@@ -12,7 +12,7 @@ const RDVCard = ({event, category, qm, date, time, teamsize, link, image}) => {
 			<p className="f4 ph3 mt4">Cash prizes worth <span class="f3">6K</span></p>
 			<p className="f4 ph3 mv1">Teams of {teamsize}</p>
 			<p className="f5 w-70 ph3 mt1 mb4">All participants must be under 25 years of age</p>
-			<a class="f5 ph3 white underline pointer dim" href={link}>Register Now!</a>
+			<a class="f5 ph3 white underline pointer dim" href={link} target='_blank'>Register Now!</a>
 		</div>
 	)
 

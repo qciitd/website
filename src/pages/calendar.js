@@ -130,6 +130,8 @@ class Calendar extends React.Component {
               audience={node.node.audience}
               event="current"
               link={node.node.schedule}
+              info={node.node.info}
+              register={node.node.register}
             />
           ))}
         </div>
@@ -188,6 +190,8 @@ class Calendar extends React.Component {
               audience={node.node.audience}
               link={node.node.schedule}
               event="new"
+              info={node.node.info}
+              register={node.node.register}
             />
           ))}
         </div>
@@ -246,6 +250,8 @@ class Calendar extends React.Component {
               teams={node.node.team}
               audience={node.node.audience}
               event="past"
+              info={node.node.info}
+              register={node.node.register}
             />
           ))}
         </div>
@@ -286,6 +292,8 @@ export const query = graphql`
           platform
           schedule
           team
+          info
+          register
         }
       }
     }

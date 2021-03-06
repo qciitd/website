@@ -42,15 +42,16 @@ const Nav = () => {
         <p onClick={() => onClick("/")} className="nav-menu">
           <h4>Home</h4>
         </p>
+        <p onClick={() => onClick("/rdv")} className="nav-menu">
+          <h4>Rendezvous '21</h4>
+        </p>
         <p onClick={() => onClick("/team")} className="nav-menu">
           <h4>About Us</h4>
         </p>
         <p onClick={() => onClick("/calendar")} className="nav-menu">
           <h4>Calendar</h4>
         </p>
-        <p onClick={() => onClick("/rdv")} className="nav-menu">
-          <h4>Rendezvous '21</h4>
-        </p>
+        
         <p onClick={() => onClick("/archives")} className=" nav-menu">
           <h4>Archives</h4>
         </p>

@@ -10,6 +10,13 @@
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
 
+  @media only screen and (max-width: 600px) {
+    .calendar-card {
+      margin:25px auto;
+     
+    }
+  }
+
   /* This container is needed to position the front and back side */
   .calendar-card-inner {
     position: relative;
