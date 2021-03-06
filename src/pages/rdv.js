@@ -24,11 +24,11 @@ const Rdv = ({ data }) => {
   return (
     <div style={{ fontFamily: "Raleway" }}>
       <Nav />
-      <div class="w-100 pt2 pb3" style={{ background: "#6CBE68" }}>
+      <div class="w-100 pt2 pb3" style={{ background: "#4bb069" }}>
         <div className="flex">
           <img className="rdv_banner_qc" src={"../../logo.jpg"} />
         <h1 class="f1-ns f3 lh-title white tc">Rendezvous' 21</h1>
-        <img className="rdv_banner_logo" src={"../../rdv-logo.png"} /></div>
+        <img className="rdv_banner_logo" src={"../../rdv-sm.png"} /></div>
         
         <h2 class="f3-ns f5 mt0 lh-title tc white">The Cultural Fest of IIT Delhi</h2>
         
