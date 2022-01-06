@@ -28,7 +28,7 @@ const Team = ({ data }) => {
       <div style={{fontFamily: "Raleway"}}>
         <div className="team-container bg-green">
           <div className="team-group-picture">
-            <img src={"https://images2.imgbox.com/a4/b0/C0F0Rs88_o.jpeg"} />
+            <img src={"https://images2.imgbox.com/18/9b/Hp1f40ON_o.jpeg"} />
           </div>
           <h2 className="tc cream-text">QC Team, 2021-22</h2>
         </div>
