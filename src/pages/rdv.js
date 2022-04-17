@@ -37,8 +37,7 @@ const Rdv = ({ data }) => {
         <p class="f4 mb0 lh-title tc black">
           This year at Rendezvous '22, QC IIT Delhi brings to you
         </p>
-        // TODO update this
-        <a href="https://dare2compete.com/o/DFWwCaO?refId=Kgf6mNb" target="_blank">
+        <a href="https://docs.google.com/document/u/0/d/1VlJfTW9NHEwwPYQ1kYf5YMBvw3M-IP0bcfOEdubBIzE" target="_blank">
         <p class="f2 mt2 lh-title tc black i fw5 avenir dark-blue">
           {" "}
           The Great Wave of Quizzes{" "}
