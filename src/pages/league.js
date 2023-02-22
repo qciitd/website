@@ -33,15 +33,15 @@ const LeaguePage = ({ data }) => {
   var b = 48;
 
   var gold = nonZeroData.filter(
-    (node) => node.node.position < g && node.node.points != 0
+    (node) => node.node.position <= g && node.node.points != 0
   );
   var silver = nonZeroData.filter(
     (node) =>
-      node.node.position > g && node.node.position < s && node.node.points != 0
+      node.node.position > g && node.node.position <= s && node.node.points != 0
   );
   var bronze = nonZeroData.filter(
     (node) =>
-      node.node.position > s && node.node.position < b && node.node.points != 0
+      node.node.position > s && node.node.position <= b && node.node.points != 0
   );
   var rest = nonZeroData.filter((node) => node.node.position > b);
 
