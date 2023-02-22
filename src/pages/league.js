@@ -24,9 +24,13 @@ const LeaguePage = ({ data }) => {
   var allData = data.allLeaderboardIndividual.edges;
   var nonZeroData = allData.filter((node) => node.node.points >= 0);
 
-  var g = nonZeroData.length / 6;
+  /*var g = nonZeroData.length / 6;
   var s = g + nonZeroData.length / 6;
   var b = s + nonZeroData.length / 6;
+  */
+  var g = 16;
+  var s = 32;
+  var b = 48;
 
   var gold = nonZeroData.filter(
     (node) => node.node.position < g && node.node.points != 0
