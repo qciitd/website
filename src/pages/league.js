@@ -43,7 +43,7 @@ const LeaguePage = ({ data }) => {
     (node) =>
       node.node.position > s && node.node.position <= b && node.node.points != 0
   );
-  var rest = nonZeroData.filter((node) => node.node.position > b);
+  var rest = nonZeroData.filter((node) => node.node.position > b && node.node.points != 0);
 
   var rest_zero = allData.filter((node) => node.node.points == 0);
 
