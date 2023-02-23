@@ -45,7 +45,7 @@ const LeaguePage = ({ data }) => {
   );
   var rest = nonZeroData.filter((node) => node.node.position > b);
 
-  var rest_zero = allData.filter((node) => node.node.points == 0);
+  //var rest_zero = allData.filter((node) => node.node.points == 0);
 
   console.log(gold);
   console.log(silver);
@@ -128,15 +128,15 @@ const LeaguePage = ({ data }) => {
                 />
               ))}
 
-              {rest_zero.map((node) => (
-                <LeaderboardTile
-                  name={node.node.name}
-                  team_name={node.node.team}
-                  points={node.node.points}
-                  position={node.node.position}
-                  medal_src={"https://i.ibb.co/DD8w8pH/blank.png"}
-                />
-              ))}
+//               {rest_zero.map((node) => (
+//                 <LeaderboardTile
+//                   name={node.node.name}
+//                   team_name={node.node.team}
+//                   points={node.node.points}
+//                   position={node.node.position}
+//                   medal_src={"https://i.ibb.co/DD8w8pH/blank.png"}
+//                 />
+//               ))}
             </div>
           </div>
         </div>
