@@ -30,14 +30,14 @@ const Team = ({ data }) => {
           <div className="team-group-picture">
             <img src={"https://images2.imgbox.com/ec/bf/MG3rpfjJ_o.png"} />
           </div>
-          <h2 className="tc cream-text">QC Team, 2021-22</h2>
+          <h2 className="tc cream-text">QC Team, 2022-23</h2>
         </div>
         <div className="bg-cream vh-50 mv4 ">
           <div className="fl w-100 w-40-ns tc">
             <FlipPoster
-              name={"64 Blocks"}
+              name={"36 Blocks"}
               data={"The Mega-General quiz to uncover the secrets that arise from the overlapping of the major genres"}
-              image={"https://i.ibb.co/pbWM78Z/64blocks.jpg"}
+              image={"https://i.ibb.co/rtnHTQp/Whats-App-Image-2023-02-28-at-12-15-54-AM.jpg"}
             />
             <FlipPoster
               name={"Occam's Razor"}
