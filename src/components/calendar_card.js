@@ -73,7 +73,7 @@ const CalendarCard = ({event, name,poster,org,date,time,audience,fees,platform, 
 
 
 	return(
-		<div className="calendar-card" style={{height: "480px", width: "320px"}}>
+		<div className="calendar-card" style={{height: "480px", width: "350px"}}>
 				<div className="calendar-card-inner">
 					<div className="calendar-card-front" style={{backgroundImage: `url("${poster}")`}}>
 					</div>
