@@ -39,7 +39,7 @@
   
   /* Style the front side (fallback if image is missing) */
   .calendar-card-front {
-    background-color: #FFFFFF;
+    background-color: #fffdf6;
     color: white;
     padding:28% 0.2rem 0.2rem 0;
     
