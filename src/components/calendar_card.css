@@ -8,6 +8,7 @@
     height: 480px;
     border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    object-fit: contain;
   }
 
 
@@ -33,6 +34,7 @@
     height: 480px;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
+    object-fit: contain;
   }
   
   /* Style the front side (fallback if image is missing) */
@@ -44,6 +46,7 @@
     background-repeat: no-repeat, repeat;
     background-position: center;
     background-size: cover;
+    object-fit: contain;
     }
 
     .transparent-box{
