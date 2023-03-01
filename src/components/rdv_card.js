@@ -16,7 +16,7 @@ const RDVCard = ({event, qm, date, time, teamsize, link, image}) => {
 	)
 
 	return(
-		<div className="calendar-card" style={{height: "480px", width: "350px"}}>
+		<div className="calendar-card" style={{height: "480px"}}>
 				<div className="calendar-card-inner">
 					<div className="calendar-card-front" style={{backgroundImage: `url("${image}")`}}>
 					</div>
