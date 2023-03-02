@@ -137,7 +137,7 @@ const IndexPage = ({ data }) => {
             image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2eerAsftnzti_it7Nbry2Vy0v1e4MTHA02IFCL34uquLlXRCj0Gv2PfgmLbg_3pjOQQ04FFsHO3p5g9w3Kxe5LYTENOLy6DQ&usqp=CAU&ec=45730948"
             colour="black"
             data={
-              "This genre covers everything you can possibly think of, not too obscure though :p From history to current events, myths to facts, and arts to sciences, this has got it all"
+              "This genre covers everything you can possibly think of, not too obscure though :p From history to current events, myths to facts, and arts to sciences, this has got it all."
             }
           />
           <FlipCard
@@ -145,7 +145,7 @@ const IndexPage = ({ data }) => {
             colour="white"
             image="https://serenademagazine.com/wp-content/uploads/2015/12/Screen-Shot-2018-06-18-at-2.21.43-AM.png"
             data={
-              " If you appreciate all things beautiful in life, then these quizzes are for you. MELA stands for Music, Entertainment, Literature, and Arts"
+              " If you appreciate all things beautiful in life, then these quizzes are for you. MELA stands for Music, Entertainment, Literature, and Arts."
             }
           />
           <FlipCard
@@ -163,7 +163,7 @@ const IndexPage = ({ data }) => {
             image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ppF9uh6--O9LMa7ShoKxqLSVzZn3b1bYnw&usqp=CAU"
             colour="white"
             data={
-              "Frustrated that all the facts you have acquired about the world of sports are not acknowledged. Worry not, for Sports Quizzes always seek you and your fellows"
+              "Frustrated that all the facts you have acquired about the world of sports are not acknowledged? Worry not, for Sports Quizzes always seek you and your fellows."
             }
           />
           <FlipCard
@@ -179,7 +179,7 @@ const IndexPage = ({ data }) => {
             image="https://i.ibb.co/23YKbM2/istockphoto-1295900106-612x612.jpg"
             colour="black"
             data={
-              " Crisp facts from the world of business, science and technology await. From corporates and conglomerates to the wonders of science, we have got you covered. Keep up with the latest tech facts as you join us for an enthralling, engaging evening"
+              " Crisp facts from the world of business, science and technology await. From corporates and conglomerates to the wonders of science, we have got you covered. Keep up with the latest tech facts as you join us for an enthralling, engaging evening."
             }
           />
         </div>
