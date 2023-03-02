@@ -176,7 +176,7 @@ const IndexPage = ({ data }) => {
           />
           <FlipCard
             name={"SCI-BIZ-TECH"}
-            image="https://i.ibb.co/5s7hNgV/new-business-startups-for-young-entrepreneurs-new-business-development-ideas-creativity-to-bring-tec.jpg"
+            image="https://i.ibb.co/23YKbM2/istockphoto-1295900106-612x612.jpg"
             colour="black"
             data={
               " If not for the sciences and the technology to realize them, the world would not be the wonder it is now. Join us here to honor the legacy of all the great minds and their thoughts that preceded us, and keep up with the latest tech facts"
