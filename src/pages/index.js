@@ -171,7 +171,7 @@ const IndexPage = ({ data }) => {
             image="https://i.ibb.co/T1wKcrS/David-Napoleon-crossing-the-Alps-Malmaison2.jpg"
             colour="white"
             data={
-              "To save time from wasting syllables, this is short for Business. Crisp facts from the world of corporates and companies for you to revel in are found in these quizzes "
+              "Did you know that America was discovered by the vikings way before Christopher Columbus? All those dreaded history classes in school have finally come to your aid! Join us for an amazing night full of mind-blowing historical facts. "
             }
           />
           <FlipCard
@@ -179,7 +179,7 @@ const IndexPage = ({ data }) => {
             image="https://i.ibb.co/23YKbM2/istockphoto-1295900106-612x612.jpg"
             colour="black"
             data={
-              " If not for the sciences and the technology to realize them, the world would not be the wonder it is now. Join us here to honor the legacy of all the great minds and their thoughts that preceded us, and keep up with the latest tech facts"
+              " Crisp facts from the world of business, science and technology await. From corporates and conglomerates to the wonders of science, we have got you covered. Keep up with the latest tech facts as you join us for an enthralling, engaging evening"
             }
           />
         </div>
