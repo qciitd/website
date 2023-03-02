@@ -167,15 +167,15 @@ const IndexPage = ({ data }) => {
             }
           />
           <FlipCard
-            name={"BIZ"}
-            image="https://www.incimages.com/uploaded_files/image/1920x1080/getty_526538729_207491.jpg"
+            name={"HISTORY"}
+            image="https://i.ibb.co/T1wKcrS/David-Napoleon-crossing-the-Alps-Malmaison2.jpg"
             colour="black"
             data={
               "To save time from wasting syllables, this is short for Business. Crisp facts from the world of corporates and companies for you to revel in are found in these quizzes "
             }
           />
           <FlipCard
-            name={"SCITECH"}
+            name={"SCI-BIZ-TECH"}
             image="https://i.ibb.co/5s7hNgV/new-business-startups-for-young-entrepreneurs-new-business-development-ideas-creativity-to-bring-tec.jpg"
             colour="white"
             data={
