@@ -169,7 +169,7 @@ const IndexPage = ({ data }) => {
           <FlipCard
             name={"HISTORY"}
             image="https://i.ibb.co/T1wKcrS/David-Napoleon-crossing-the-Alps-Malmaison2.jpg"
-            colour="black"
+            colour="white"
             data={
               "To save time from wasting syllables, this is short for Business. Crisp facts from the world of corporates and companies for you to revel in are found in these quizzes "
             }
@@ -177,7 +177,7 @@ const IndexPage = ({ data }) => {
           <FlipCard
             name={"SCI-BIZ-TECH"}
             image="https://i.ibb.co/5s7hNgV/new-business-startups-for-young-entrepreneurs-new-business-development-ideas-creativity-to-bring-tec.jpg"
-            colour="white"
+            colour="black"
             data={
               " If not for the sciences and the technology to realize them, the world would not be the wonder it is now. Join us here to honor the legacy of all the great minds and their thoughts that preceded us, and keep up with the latest tech facts"
             }
