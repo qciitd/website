@@ -37,12 +37,18 @@ const Rdv = ({ data }) => {
         <p class="f4 mb0 lh-title tc black">
           This year at Rendezvous '23, QC IIT Delhi brings to you
         </p>
-        <a href="https://docs.google.com/document/u/0/d/1VlJfTW9NHEwwPYQ1kYf5YMBvw3M-IP0bcfOEdubBIzE" target="_blank">
+        
         <p class="f2 mt2 lh-title tc black i fw5 avenir dark-blue">
           {" "}
           The Great Wave of Quizzes{" "}
         </p>
-        </a>
+       
+	<a href="http://linktr.ee/qciitdelhi" target="_blank">
+	<p class="f2 mt2 lh-title tc black i fw5 avenir dark-blue">
+		{" "}
+		Register here{" "}
+	</p>
+	</a>
       </div>
       <div class={`grid ${isBrowser ? "w-80" : "w-100"}`} style={{ margin: "auto" }}>
         {output}
