@@ -9,7 +9,6 @@ const RDVCard = ({event, qm, date, time, teamsize, link, image}) => {
 			<p className="f4 ph3 mt3 mb0">QM: {qm}</p>
 			<p className="f4 ph3 mt3 mb0">{date}, at {time}</p>
 			<p className="f4 ph3 mv1">Teams of {teamsize}</p>
-			<p className="f5 w-70 ph3 mt1 mb4">All participants must be under 25 years of age</p>
 			<a class="f5 ph3 white underline pointer dim" href={link} target='_blank'>Register Now!</a>
 		</div>
 	)
