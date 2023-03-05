@@ -42,7 +42,7 @@ const Team = ({ data }) => {
             <FlipPoster
               name={"Occam's Razor"}
               data={"The most challenging questions that measure your ability to put simple fundas to use effectively"}
-              image={"https://i.ibb.co/Zmr96rX/occams.jpg"}
+              image={"https://i.ibb.co/9NPbhNt/Whats-App-Image-2023-03-05-at-10-09-16-PM.jpg"}
             />
             <FlipPoster
               name={"MasterMind"}
