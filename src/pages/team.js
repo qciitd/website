@@ -52,7 +52,7 @@ const Team = ({ data }) => {
             <FlipPoster
               name={"Freshers Quiz"}
               data={"Race against time to clinch this crown amongst the champions of their respective fields"}
-              image={"https://ibb.co/HpLbn7V"}
+              image={"https://i.ibb.co/Fqkyg6K/Whats-App-Image-2023-03-02-at-1-22-41-PM.jpg"}
             />
           </div>
           <div className="fl w-100 w-60-ns pl3 pr3 tr-ns tl mt4">
