@@ -49,6 +49,11 @@ const Team = ({ data }) => {
               data={"Race against time to clinch this crown amongst the champions of their respective fields"}
               image={"https://i.ibb.co/xq7210K/mastermind.jpg"}
             />
+            <FlipPoster
+              name={"Freshers Quiz"}
+              data={"Race against time to clinch this crown amongst the champions of their respective fields"}
+              image={"https://ibb.co/HpLbn7V"}
+            />
           </div>
           <div className="fl w-100 w-60-ns pl3 pr3 tr-ns tl mt4">
             <h1 class="f2 lh-title tl ml4">What do we do ?</h1>
