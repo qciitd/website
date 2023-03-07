@@ -31,7 +31,7 @@ export const query = graphql`
     allGallery2019Xx2020 {
       edges {
         node {
-          caption
+          
           image
         }
       }
