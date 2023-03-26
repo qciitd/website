@@ -66,7 +66,7 @@ const LeaguePage = ({ data }) => {
             <ScrollAnimation animateIn="fadeIn" delay={800} offset={150} duration={2} animateOnce={true}>
               <p class="f3-ns f6">
                 The leaderboard is based on the points obtained during
-                League Quizzes only. The league team rannkings after the completion of 5 out of the 6 quizzes are as follows:</p>
+                League Quizzes only. The league team rankings after the completion of 5 out of the 6 quizzes are as follows:</p>
               <p class="f3-ns f6">
                 1.) Team Galaga (Captain - Gautam)</p>
               <p class="f3-ns f6">
