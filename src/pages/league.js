@@ -66,13 +66,13 @@ const LeaguePage = ({ data }) => {
             <ScrollAnimation animateIn="fadeIn" delay={800} offset={150} duration={2} animateOnce={true}>
               <p class="f3-ns f6">
                 The leaderboard is based on the points obtained during
-                League Quizzes only. The league team rannkings after the completion of 5 out of the 6 quizzes are as follows:\n
-                1.) Team Galaga (Captain - Gautam)\n
-                2.) Team Earthbound (Captain - Rishabh)\n
-                3.) Team Castlevania (Captain - Afreen)\n
-                4.) Team Goldeneye (Captain - Anish)\n
-                5.) Team Space Invaders (Captain - Pratham)\n
-                6.) Team Atomic Punk (Captain - Akshit)\n
+                League Quizzes only. The league team rannkings after the completion of 5 out of the 6 quizzes are as follows:<br>
+                1.) Team Galaga (Captain - Gautam)<br>
+                2.) Team Earthbound (Captain - Rishabh)<br>
+                3.) Team Castlevania (Captain - Afreen)<br>
+                4.) Team Goldeneye (Captain - Anish)<br>
+                5.) Team Space Invaders (Captain - Pratham)<br>
+                6.) Team Atomic Punk (Captain - Akshit)<br>
                 The scores are updated within 1 or 2 days
                 after any league quiz. For any discrepancies, contact the secretary.
               </p>
