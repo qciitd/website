@@ -30,7 +30,7 @@ const LeaguePage = ({ data }) => {
   */
   var g = 16;
   var s = 32;
-  var b = 48;
+  var b = 53;
 
   var gold = nonZeroData.filter(
     (node) => node.node.position <= g && node.node.points != 0
